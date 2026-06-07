@@ -149,8 +149,8 @@ h3 {
   display: block;
   font-size: clamp(3.2rem, 7.2vw, 5.7rem);
   line-height: 1.04;
-  letter-spacing: -0.035em;
-  word-spacing: 0.08em;
+  letter-spacing: -0.02em;
+  word-spacing: 0.1em;
   font-weight: 900;
 }
 
