@@ -130,7 +130,7 @@ h3 { font-size: 1.25rem; }
 }
 @media (max-width: 520px) {
   .brand-logo {
-    height: 34px;
+    height: 52px;
     max-width: 220px;
   }
 }
