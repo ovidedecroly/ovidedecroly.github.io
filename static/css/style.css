@@ -147,9 +147,10 @@ h3 {
 
 .hero-brand {
   display: block;
-  font-size: clamp(3.4rem, 8vw, 6.2rem);
-  line-height: 1.02;
-  letter-spacing: -0.075em;
+  font-size: clamp(3.2rem, 7.2vw, 5.7rem);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  word-spacing: 0.08em;
   font-weight: 900;
 }
 
