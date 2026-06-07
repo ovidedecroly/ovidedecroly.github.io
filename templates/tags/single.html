@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-hero"><div class="container"><p class="eyebrow">Tag</p><h1>{{ term.name }}</h1></div></section>
+<section class="section"><div class="container card-grid">
+{% for page in term.pages %}{% include "partials/article-card.html" %}{% endfor %}
+</div></section>
+{% endblock content %}

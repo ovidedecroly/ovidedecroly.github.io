@@ -1,0 +1,62 @@
+base_url = "https://ovidedecroly.github.io"
+title = "Ovide Academy"
+description = "Personal academic website, blog, research notes, teaching materials, and books by Dr. Ovide Decroly Wisnu Ardhi."
+default_language = "id"
+compile_sass = false
+build_search_index = true
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+minify_html = true
+
+# Zola taxonomies. These generate /tags/ and /categories/ pages.
+taxonomies = [
+  { name = "tags", feed = true },
+  { name = "categories", feed = true },
+]
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-dark"
+smart_punctuation = true
+
+[search]
+include_title = true
+include_description = true
+include_content = true
+
+[extra]
+author = "Dr. Ovide Decroly Wisnu Ardhi, S.T., M.Eng."
+role = "Applied AI Researcher"
+headline = "Applied AI, Computer Vision, Deep Learning, Academic Writing, and Digital Education"
+intro = "Ovide Academy is a personal academic website for sharing research notes, teaching materials, blog articles, books, and applied AI ideas."
+email = ""
+github = "https://github.com/ovidedecroly"
+linkedin = "https://www.linkedin.com/in/ovide-decroly-1b6a77127/"
+
+[[extra.nav]]
+name = "Home"
+url = "/"
+
+[[extra.nav]]
+name = "Blog"
+url = "/blog/"
+
+[[extra.nav]]
+name = "Research"
+url = "/research/"
+
+[[extra.nav]]
+name = "Teaching"
+url = "/teaching/"
+
+[[extra.nav]]
+name = "Buku Saya"
+url = "/books/"
+
+[[extra.nav]]
+name = "Publications"
+url = "/publications/"
+
+[[extra.nav]]
+name = "About"
+url = "/about/"

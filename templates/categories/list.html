@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-hero"><div class="container"><p class="eyebrow">Taxonomy</p><h1>Categories</h1></div></section>
+<section class="section"><div class="container tag-cloud">
+{% for term in terms %}<a href="{{ term.permalink }}">{{ term.name }} <span>{{ term.pages | length }}</span></a>{% endfor %}
+</div></section>
+{% endblock content %}

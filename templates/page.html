@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="article container narrow">
+  <p class="eyebrow">{{ page.date | date(format="%d %B %Y") }}</p>
+  <h1>{{ page.title }}</h1>
+  {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+
+  {% if page.taxonomies.tags %}
+    <div class="tag-row">
+      {% for tag in page.taxonomies.tags %}<span>{{ tag }}</span>{% endfor %}
+    </div>
+  {% endif %}
+
+  {% set pdf = page.extra.pdf | default(value="") %}
+  {% if pdf %}
+    <p><a class="btn primary" href="{{ pdf }}" target="_blank" rel="noopener">Download PDF</a></p>
+  {% endif %}
+
+  <div class="content">
+    {{ page.content | safe }}
+  </div>
+</article>
+{% endblock content %}

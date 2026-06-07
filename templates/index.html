@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Personal Academic Website</p>
+      <h1>{{ config.title }}</h1>
+      <p class="lead">{{ config.extra.role }}</p>
+      <p>{{ config.extra.intro }}</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="/blog/">Baca Artikel</a>
+        <a class="btn" href="/books/">Lihat Buku Saya</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h2>Focus Areas</h2>
+      <ul class="check-list">
+        <li>Artificial Intelligence</li>
+        <li>Computer Vision</li>
+        <li>Deep Learning</li>
+        <li>YOLO-based Object Detection</li>
+        <li>Academic Writing</li>
+        <li>Digital and Islamic Education</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container section-head">
+    <div>
+      <p class="eyebrow">Blog</p>
+      <h2>Artikel Terbaru</h2>
+    </div>
+    <a href="/blog/">Semua artikel &rarr;</a>
+  </div>
+  <div class="container card-grid">
+    {% set blog = get_section(path="blog/_index.md") %}
+    {% for page in blog.pages | slice(end=3) %}
+      {% include "partials/article-card.html" %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section muted">
+  <div class="container section-head">
+    <div>
+      <p class="eyebrow">Books</p>
+      <h2>Buku Saya</h2>
+    </div>
+    <a href="/books/">Semua buku &rarr;</a>
+  </div>
+  <div class="container book-grid">
+    {% set books = get_section(path="books/_index.md") %}
+    {% for page in books.pages | slice(end=3) %}
+      {% include "partials/book-card.html" %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container section-head">
+    <div>
+      <p class="eyebrow">Research</p>
+      <h2>Research Highlights</h2>
+    </div>
+    <a href="/research/">Semua riset &rarr;</a>
+  </div>
+  <div class="container card-grid">
+    {% set research = get_section(path="research/_index.md") %}
+    {% for page in research.pages | slice(end=3) %}
+      {% include "partials/article-card.html" %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section muted">
+  <div class="container section-head">
+    <div>
+      <p class="eyebrow">Teaching</p>
+      <h2>Teaching Materials</h2>
+    </div>
+    <a href="/teaching/">Semua materi &rarr;</a>
+  </div>
+  <div class="container card-grid">
+    {% set teaching = get_section(path="teaching/_index.md") %}
+    {% for page in teaching.pages | slice(end=3) %}
+      {% include "partials/article-card.html" %}
+    {% endfor %}
+  </div>
+</section>
+{% endblock content %}

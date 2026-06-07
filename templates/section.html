@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{{ config.title }}</p>
+    <h1>{{ section.title }}</h1>
+    {% if section.description %}<p class="lead">{{ section.description }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container card-grid">
+    {% for page in section.pages %}
+      {% include "partials/article-card.html" %}
+    {% endfor %}
+  </div>
+</section>
+{% endblock content %}

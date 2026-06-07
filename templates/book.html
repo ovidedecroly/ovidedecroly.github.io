@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="article container narrow">
+  {% set cover = page.extra.cover | default(value="") %}
+  {% set pdf = page.extra.pdf | default(value="") %}
+  {% set status = page.extra.status | default(value="") %}
+
+  <div class="book-detail">
+    {% if cover %}
+      <img class="book-cover-large" src="{{ cover }}" alt="Cover {{ page.title }}">
+    {% endif %}
+    <div>
+      <p class="eyebrow">Buku Saya</p>
+      <h1>{{ page.title }}</h1>
+      {% if status %}<p class="status">{{ status }}</p>{% endif %}
+      {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+      <div class="hero-actions">
+        {% if pdf %}<a class="btn primary" href="{{ pdf }}" target="_blank" rel="noopener">Download PDF</a>{% endif %}
+        <a class="btn" href="/books/">Kembali ke daftar buku</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    {{ page.content | safe }}
+  </div>
+</article>
+{% endblock content %}
