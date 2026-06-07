@@ -4,6 +4,8 @@ description = "Profile of Dr. Ovide Decroly Wisnu Ardhi, an Applied AI Researche
 template = "about.html"
 +++
 
+<!-- force rebuild about page --> 
+
 Dr. Ovide Decroly Wisnu Ardhi is an Applied AI Researcher with academic interests in artificial intelligence, computer vision, deep learning, object detection, academic writing, and digital education.
 
 This website, **Ovide Academy**, is developed as a personal academic platform for sharing research notes, teaching materials, blog articles, books, and applied AI ideas.
