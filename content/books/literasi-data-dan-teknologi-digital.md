@@ -1,20 +1,20 @@
 +++
 title = "Literasi Data dan Teknologi Digital"
 date = 2026-06-07
-description = "Buku pengantar literasi data dan teknologi digital untuk mahasiswa."
+description = "An introductory book on data literacy and digital technology for students."
+
 [taxonomies]
-categories = ["Buku"]
-tags = ["Literasi Data", "Teknologi Digital", "Pendidikan"]
+categories = ["Books"]
+tags = ["Data Literacy", "Digital Technology", "Education"]
+
 [extra]
 cover = "/images/book-literasi-data.svg"
 pdf = ""
 status = "Draft"
 +++
 
-Buku ini dirancang sebagai pengantar literasi data dan teknologi digital untuk mahasiswa. Materi dapat mencakup konsep data, informasi, visualisasi data, keamanan digital, kecerdasan buatan, dan pemanfaatan teknologi dalam kehidupan akademik.
+# Literasi Data dan Teknologi Digital
 
-Untuk menambahkan file PDF buku, letakkan file PDF di folder `static/pdf/`, lalu isi bagian `pdf` pada front matter halaman ini, misalnya:
+This book introduces data literacy and digital technology for students.
 
-```toml
-pdf = "/pdf/literasi-data-dan-teknologi-digital.pdf"
-```
+It discusses basic concepts of data, information, digital technology, artificial intelligence, digital security, and the role of data literacy in academic and professional contexts.

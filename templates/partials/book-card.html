@@ -1,17 +1,27 @@
-{% set cover = page.extra.cover | default(value="") %}
-{% set pdf = page.extra.pdf | default(value="") %}
-{% set status = page.extra.status | default(value="") %}
 <article class="book-card">
-  {% if cover %}
-    <img class="book-cover" src="{{ cover }}" alt="Cover {{ page.title }}">
+  {% if page.extra.cover %}
+    <img class="book-cover" src="{{ page.extra.cover }}" alt="{{ page.title }}">
   {% endif %}
+
   <div class="book-card-body">
-    {% if status %}<p class="status">{{ status }}</p>{% endif %}
-    <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
-    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+    {% if page.extra.status %}
+      <p class="status">{{ page.extra.status }}</p>
+    {% endif %}
+
+    <h3>
+      <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+    </h3>
+
+    {% if page.description %}
+      <p>{{ page.description }}</p>
+    {% endif %}
+
     <div class="book-actions">
-      <a class="btn small" href="{{ page.permalink }}">Detail</a>
-      {% if pdf %}<a class="btn small primary" href="{{ pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+      <a class="btn small" href="{{ page.permalink | safe }}">Details</a>
+
+      {% if page.extra.pdf %}
+        <a class="btn small primary" href="{{ page.extra.pdf }}" target="_blank" rel="noopener">Download PDF</a>
+      {% endif %}
     </div>
   </div>
 </article>

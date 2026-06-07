@@ -1,8 +1,11 @@
 +++
-title = "Buku Saya"
-description = "Daftar buku, modul, dan naskah ajar yang ditulis atau sedang dikembangkan."
+title = "Books"
+description = "Books, modules, and learning resources by Dr. Ovide Decroly Wisnu Ardhi."
 sort_by = "date"
-template = "books.html"
+template = "section.html"
 page_template = "book.html"
-paginate_by = 6
 +++
+
+# Books
+
+This page contains books, modules, and learning resources developed as part of Ovide Academy.

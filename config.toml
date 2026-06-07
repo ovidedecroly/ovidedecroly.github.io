@@ -50,7 +50,7 @@ name = "Teaching"
 url = "/teaching/"
 
 [[extra.nav]]
-name = "Buku Saya"
+name = "Books"
 url = "/books/"
 
 [[extra.nav]]

@@ -4,16 +4,35 @@
 <section class="page-hero">
   <div class="container">
     <p class="eyebrow">Books</p>
-    <h1>{{ section.title }}</h1>
-    {% if section.description %}<p class="lead">{{ section.description }}</p>{% endif %}
+    <h1>Books</h1>
+
+    {% if section.description %}
+      <p class="lead">{{ section.description }}</p>
+    {% else %}
+      <p class="lead">
+        Books, modules, and learning resources developed as part of Ovide Academy.
+      </p>
+    {% endif %}
   </div>
 </section>
 
 <section class="section muted">
-  <div class="container book-grid">
-    {% for page in section.pages %}
-      {% include "partials/book-card.html" %}
-    {% endfor %}
+  <div class="container">
+    {% if section.pages | length > 0 %}
+      <div class="book-grid">
+        {% for page in section.pages %}
+          {% include "partials/book-card.html" %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="card">
+        <h3>No books available yet</h3>
+        <p>
+          Book entries will appear here after they are added to the
+          <code>content/books/</code> folder.
+        </p>
+      </div>
+    {% endif %}
   </div>
 </section>
 {% endblock content %}

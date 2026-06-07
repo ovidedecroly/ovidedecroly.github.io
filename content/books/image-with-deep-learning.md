@@ -1,16 +1,20 @@
 +++
 title = "Image with Deep Learning"
-date = 2026-06-08
-description = "Buku atau modul tentang pengolahan citra, deep learning, dan deteksi objek."
+date = 2026-06-07
+description = "A book or module about image processing, deep learning, and object detection."
+
 [taxonomies]
-categories = ["Buku"]
-tags = ["Deep Learning", "Computer Vision", "YOLO"]
+categories = ["Books"]
+tags = ["Deep Learning", "Computer Vision", "Object Detection"]
+
 [extra]
 cover = "/images/book-image-deep-learning.svg"
 pdf = ""
 status = "In preparation"
 +++
 
-Buku ini dapat digunakan untuk membahas dasar pengolahan citra, machine learning untuk citra, convolutional neural network, transfer learning, object detection, interpretability, dan deployment sederhana.
+# Image with Deep Learning
 
-Konten dapat dikembangkan menjadi bahan ajar, modul praktikum, atau buku akademik populer untuk mahasiswa dan peneliti pemula.
+This book introduces image processing, deep learning, convolutional neural networks, and object detection.
+
+It is designed as a learning resource for students, researchers, and early-stage practitioners who want to understand how deep learning can be applied to image-based problems.
