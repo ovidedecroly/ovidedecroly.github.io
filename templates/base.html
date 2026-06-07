@@ -58,20 +58,20 @@
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="/">
-        <span class="brand-main">Ovide</span>
-        <span class="brand-sub">Academy</span>
-      </a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/">
+      <span class="brand-main">Ovide</span>
+      <span class="brand-sub">Academy</span>
+    </a>
 
-      <nav class="main-nav" aria-label="Main navigation">
-        {% for item in config.extra.nav %}
-          <a href="{{ item.url | safe }}">{{ item.name }}</a>
-        {% endfor %}
-      </nav>
-    </div>
-  </header>
+    <nav class="main-nav" aria-label="Main navigation">
+      {% for item in config.extra.nav %}
+        <a href="{{ item.url | safe }}">{{ item.name }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
 
   <main>
     {% block content %}{% endblock content %}

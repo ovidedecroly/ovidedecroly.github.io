@@ -36,10 +36,13 @@ a:hover { color: var(--brand); }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  font-size: 1.2rem;
-  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.brand-logo {
+  height: 38px;
+  width: auto;
+  display: block;
 }
 
 .brand-logo {
@@ -53,6 +56,27 @@ a:hover { color: var(--brand); }
 .eyebrow { text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.14em; color: var(--accent); font-weight: 800; margin: 0 0 10px; }
 h1, h2, h3 { line-height: 1.15; letter-spacing: -0.04em; margin: 0 0 14px; }
 h1 { font-size: clamp(2.8rem, 8vw, 5.8rem); }
+
+.hero-title {
+  max-width: 760px;
+  margin-bottom: 22px;
+}
+
+.hero-brand {
+  display: block;
+  font-size: clamp(3rem, 7vw, 5.4rem);
+  line-height: 1.03;
+  letter-spacing: -0.06em;
+}
+
+.hero-name {
+  display: block;
+  max-width: 760px;
+  font-size: clamp(1.75rem, 3.6vw, 3.05rem);
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+  margin-top: 12px;
+}
 h2 { font-size: clamp(2rem, 4vw, 3rem); }
 h3 { font-size: 1.25rem; }
 .lead { font-size: 1.22rem; color: var(--muted); }
@@ -128,9 +152,23 @@ h3 { font-size: 1.25rem; }
   .book-card { grid-template-columns: 1fr; }
   .book-cover { height: 220px; }
 }
+@media (max-width: 860px) {
+  .brand-logo {
+    height: 34px;
+  }
+
+  .hero-brand {
+    font-size: clamp(2.6rem, 11vw, 4rem);
+  }
+
+  .hero-name {
+    font-size: clamp(1.55rem, 7vw, 2.4rem);
+  }
+}
+
 @media (max-width: 520px) {
   .brand-logo {
-    height: 52px;
-    max-width: 220px;
+    height: 30px;
+    max-width: 210px;
   }
 }
