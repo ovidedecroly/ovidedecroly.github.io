@@ -1,10 +1,9 @@
 +++
-title = "Dr. Ovide Decroly Wisnu Ardhi"
+title = "About"
 description = "Profile of Dr. Ovide Decroly Wisnu Ardhi, an Applied AI Researcher focusing on computer vision, deep learning, academic writing, and digital education."
-template = "about.html"
 +++
 
-<!-- force rebuild about page --> 
+# Dr. Ovide Decroly Wisnu Ardhi
 
 Dr. Ovide Decroly Wisnu Ardhi is an Applied AI Researcher with academic interests in artificial intelligence, computer vision, deep learning, object detection, academic writing, and digital education.
 
