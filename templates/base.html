@@ -1,40 +1,93 @@
 <!doctype html>
-<html lang="id">
+<html lang="{{ config.default_language | default(value='id') }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}{% if page and page.title %}{{ page.title }} | {{ config.title }}{% elif section and section.title %}{{ section.title }} | {{ config.title }}{% else %}{{ config.title }}{% endif %}{% endblock title %}</title>
-  <meta name="description" content="{% if page and page.description %}{{ page.description }}{% elif section and section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="/atom.xml">
+
+  <title>{% if page is defined %}{{ page.title }} | {{ config.title }}{% elif section is defined %}{{ section.title }} | {{ config.title }}{% else %}{{ config.title }}{% endif %}</title>
+
+  <meta name="description" content="{% if page is defined and page.description %}{{ page.description }}{% elif section is defined and section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}">
+  <meta name="author" content="{{ config.extra.author }}">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="theme-color" content="#111111">
+
+  <link rel="canonical" href="{% if current_url is defined %}{{ current_url | safe }}{% else %}{{ config.base_url | safe }}{% endif %}">
+  <link rel="stylesheet" href="{{ get_url(path='css/style.css') | safe }}">
+
+  <meta property="og:title" content="{% if page is defined %}{{ page.title }} | {{ config.title }}{% elif section is defined %}{{ section.title }} | {{ config.title }}{% else %}{{ config.title }}{% endif %}">
+  <meta property="og:description" content="{% if page is defined and page.description %}{{ page.description }}{% elif section is defined and section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}">
+  <meta property="og:type" content="{% if page is defined %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{% if current_url is defined %}{{ current_url | safe }}{% else %}{{ config.base_url | safe }}{% endif %}">
+  <meta property="og:site_name" content="Ovide Academy">
+  <meta property="og:locale" content="id_ID">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if page is defined %}{{ page.title }} | {{ config.title }}{% elif section is defined %}{{ section.title }} | {{ config.title }}{% else %}{{ config.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page is defined and page.description %}{{ page.description }}{% elif section is defined and section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dr. Ovide Decroly Wisnu Ardhi",
+    "alternateName": [
+      "Ovide Decroly",
+      "Ovide Academy",
+      "Dr. Ovide Decroly"
+    ],
+    "honorificPrefix": "Dr.",
+    "jobTitle": "Applied AI Researcher",
+    "url": "https://ovidedecroly.github.io",
+    "sameAs": [
+      "https://github.com/ovidedecroly"
+    ],
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Applied AI",
+      "Computer Vision",
+      "Deep Learning",
+      "Object Detection",
+      "YOLO",
+      "Academic Writing",
+      "Digital Education"
+    ],
+    "description": "Dr. Ovide Decroly Wisnu Ardhi is an Applied AI Researcher focusing on computer vision, deep learning, academic writing, and digital education."
+  }
+  </script>
 </head>
+
 <body>
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="/">
-      <img src="/images/logo-ovide-academy.png" alt="Ovide Academy" class="brand-logo">
-    </a>
-    <nav class="main-nav" aria-label="Main navigation">
-      {% for item in config.extra.nav %}
-        <a href="{{ item.url }}">{{ item.name }}</a>
-      {% endfor %}
-    </nav>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">
+        <span class="brand-main">Ovide</span>
+        <span class="brand-sub">Academy</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        {% for item in config.extra.nav %}
+          <a href="{{ item.url | safe }}">{{ item.name }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
 
   <main>
     {% block content %}{% endblock content %}
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>{{ config.title }}</strong>
-        <p>{{ config.extra.headline }}</p>
-      </div>
-      <div>
-        <p>Built with Zola and hosted on GitHub Pages.</p>
-        <p>&copy; {{ now() | date(format="%Y") }} {{ config.extra.author }}</p>
+    <div class="container footer-wrap">
+      <p>
+        © {{ now() | date(format="%Y") }} Ovide Academy. Personal academic website of
+        Dr. Ovide Decroly Wisnu Ardhi.
+      </p>
+
+      <div class="footer-links">
+        <a href="https://github.com/ovidedecroly" target="_blank" rel="noopener">GitHub</a>
+        <a href="/about/">About</a>
+        <a href="/blog/">Blog</a>
       </div>
     </div>
   </footer>

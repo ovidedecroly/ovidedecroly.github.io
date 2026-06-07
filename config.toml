@@ -1,6 +1,6 @@
 base_url = "https://ovidedecroly.github.io"
-title = "Ovide Academy"
-description = "Personal academic website, blog, research notes, teaching materials, and books by Dr. Ovide Decroly Wisnu Ardhi."
+title = "Ovide Academy | Dr. Ovide Decroly Wisnu Ardhi"
+description = "Ovide Academy is the personal academic website of Dr. Ovide Decroly Wisnu Ardhi, an Applied AI Researcher focusing on computer vision, deep learning, academic writing, and digital education."
 default_language = "id"
 compile_sass = false
 build_search_index = false
@@ -19,19 +19,20 @@ highlight_code = true
 highlight_theme = "base16-ocean-dark"
 smart_punctuation = true
 
-[search]
-include_title = true
-include_description = true
-include_content = true
-
 [extra]
 author = "Dr. Ovide Decroly Wisnu Ardhi, S.T., M.Eng."
+short_author = "Ovide Decroly"
+brand = "Ovide Academy"
 role = "Applied AI Researcher"
 headline = "Applied AI, Computer Vision, Deep Learning, Academic Writing, and Digital Education"
-intro = "Ovide Academy is a personal academic website for sharing research notes, teaching materials, blog articles, books, and applied AI ideas."
+intro = "Ovide Academy is the personal academic website of Dr. Ovide Decroly Wisnu Ardhi for sharing research notes, teaching materials, blog articles, books, and applied AI ideas."
 email = ""
 github = "https://github.com/ovidedecroly"
-linkedin = "https://www.linkedin.com/in/ovide-decroly-1b6a77127/"
+linkedin = ""
+google_scholar = ""
+orcid = ""
+sinta = ""
+scopus = ""
 
 [[extra.nav]]
 name = "Home"
