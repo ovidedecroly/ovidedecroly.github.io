@@ -9,16 +9,18 @@
   <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="/atom.xml">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="/">{{ config.title }}</a>
-      <nav class="main-nav" aria-label="Main navigation">
-        {% for item in config.extra.nav %}
-          <a href="{{ item.url }}">{{ item.name }}</a>
-        {% endfor %}
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/">
+      <img src="/images/logo-ovide-academy.png" alt="Ovide Academy" class="brand-logo">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      {% for item in config.extra.nav %}
+        <a href="{{ item.url }}">{{ item.name }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
 
   <main>
     {% block content %}{% endblock content %}

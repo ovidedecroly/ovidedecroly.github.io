@@ -33,7 +33,20 @@ a:hover { color: var(--brand); }
   backdrop-filter: blur(14px);
 }
 .nav-wrap { display: flex; justify-content: space-between; align-items: center; min-height: 74px; gap: 24px; }
-.brand { font-weight: 800; font-size: 1.2rem; letter-spacing: -0.03em; }
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+}
+
+.brand-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+}
 .main-nav { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; font-size: 0.95rem; color: var(--muted); }
 .hero { padding: 86px 0 60px; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr); gap: 34px; align-items: center; }
@@ -114,4 +127,10 @@ h3 { font-size: 1.25rem; }
   .main-nav { gap: 12px; font-size: 0.9rem; }
   .book-card { grid-template-columns: 1fr; }
   .book-cover { height: 220px; }
+}
+@media (max-width: 520px) {
+  .brand-logo {
+    height: 34px;
+    max-width: 220px;
+  }
 }
