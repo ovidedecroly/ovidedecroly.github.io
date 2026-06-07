@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow">About</p>
+    <h1>{{ section.title }}</h1>
+
+    {% if section.description %}
+      <p class="lead">{{ section.description }}</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="article">
+  <div class="container narrow">
+    <div class="content">
+      {{ section.content | safe }}
+    </div>
+  </div>
+</section>
+{% endblock content %}
