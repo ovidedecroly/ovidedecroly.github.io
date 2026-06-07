@@ -4,7 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page is defined %}{{ page.title }} | {{ config.title }}{% elif section is defined %}{{ section.title }} | {{ config.title }}{% else %}{{ config.title }}{% endif %}</title>
+  <title>
+    {% if page is defined %}
+      {{ page.title }} | {{ config.title }}
+    {% elif section is defined %}
+      {{ section.title }} | {{ config.title }}
+    {% else %}
+      {{ config.title }}
+    {% endif %}
+  </title>
 
   <meta name="description" content="{% if page is defined and page.description %}{{ page.description }}{% elif section is defined and section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}">
   <meta name="author" content="{{ config.extra.author }}">
@@ -58,20 +66,25 @@
 </head>
 
 <body>
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="/">
-      <span class="brand-main">Ovide</span>
-      <span class="brand-sub">Academy</span>
-    </a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/" aria-label="Ovide Academy Home">
+        <img
+          src="/images/logo-ovide-academy.png"
+          alt="Ovide Academy"
+          class="brand-logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';"
+        >
+        <span class="brand-fallback">Ovide Academy</span>
+      </a>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      {% for item in config.extra.nav %}
-        <a href="{{ item.url | safe }}">{{ item.name }}</a>
-      {% endfor %}
-    </nav>
-  </div>
-</header>
+      <nav class="main-nav" aria-label="Main navigation">
+        {% for item in config.extra.nav %}
+          <a href="{{ item.url | safe }}">{{ item.name }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
 
   <main>
     {% block content %}{% endblock content %}

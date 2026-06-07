@@ -4,20 +4,20 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-<p class="eyebrow">Personal Academic Website</p>
+      <p class="eyebrow">Personal Academic Website</p>
 
-<h1 class="hero-title">
-  <span class="hero-brand">Ovide Academy</span>
-  <span class="hero-name">Dr. Ovide Decroly Wisnu Ardhi</span>
-</h1>
+      <h1 class="hero-title">
+        <span class="hero-brand">Ovide Academy</span>
+      </h1>
 
-<p class="lead">{{ config.extra.role }}</p>
-<p>{{ config.extra.intro }}</p>
+      <p class="hero-intro">{{ config.extra.intro }}</p>
+
       <div class="hero-actions">
         <a class="btn primary" href="/blog/">Baca Artikel</a>
         <a class="btn" href="/books/">Lihat Buku Saya</a>
       </div>
     </div>
+
     <div class="hero-card">
       <h2>Focus Areas</h2>
       <ul class="check-list">
@@ -40,6 +40,7 @@
     </div>
     <a href="/blog/">Semua artikel &rarr;</a>
   </div>
+
   <div class="container card-grid">
     {% set blog = get_section(path="blog/_index.md") %}
     {% for page in blog.pages | slice(end=3) %}
@@ -56,6 +57,7 @@
     </div>
     <a href="/books/">Semua buku &rarr;</a>
   </div>
+
   <div class="container book-grid">
     {% set books = get_section(path="books/_index.md") %}
     {% for page in books.pages | slice(end=3) %}
@@ -72,6 +74,7 @@
     </div>
     <a href="/research/">Semua riset &rarr;</a>
   </div>
+
   <div class="container card-grid">
     {% set research = get_section(path="research/_index.md") %}
     {% for page in research.pages | slice(end=3) %}
@@ -88,6 +91,7 @@
     </div>
     <a href="/teaching/">Semua materi &rarr;</a>
   </div>
+
   <div class="container card-grid">
     {% set teaching = get_section(path="teaching/_index.md") %}
     {% for page in teaching.pages | slice(end=3) %}
