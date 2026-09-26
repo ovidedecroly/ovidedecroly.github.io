@@ -1,47 +1,66 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icons from '../../components/Icons.astro';
 
 const publications = [
-  {
-    title: "AI-Based Decision Support and Computer Vision in Modern Higher Education",
-    date: "2026",
-    publisher: "Journal of Applied Artificial Intelligence & Education",
-    desc: "A peer-reviewed study examining the implementation of computer vision pipelines and deep learning in scientific image analysis.",
-    authors: "Dr. Ovide Decroly Wisnu Ardhi, et al."
-  }
+  { year: "2026", title: "Plant Disease Object Detection on PlantDoc Using YOLO26n", pub: "Sisfo: Jurnal Ilmiah Sistem Informasi, 10(1), 187–197." },
+  { year: "2026", title: "Analyzing User Acceptance of Augmented Reality Applications for Traditional Musical Instrument Recognition in Indonesia", pub: "AIP Conference Proceedings, 3411(1), 060007." },
+  { year: "2026", title: "Maritopia: A VR-Based Underwater Learning Experience Evaluated Through HEART Metric and Design Thinking Methodology", pub: "Procedia Computer Science, 284, 1093–1100." },
+  { year: "2026", title: "Augmented Reality Applications for Zoos: Enhancing Visitor Engagement Through Interactive Animal Categorization and Conservation Awareness", pub: "Procedia Computer Science, 284, 1233–1240." },
+  { year: "2026", title: "AI Integration for Irrigation Optimization", pub: "Handbook of Artificial Intelligence in Water Management." },
+  { year: "2026", title: "Decarbonization in the Nexus of Waste–Food and Energy Using Digital Technologies", pub: "Climate Change Impacts on the Water-Energy-Food Nexus, 437–494." },
+  { year: "2025", title: "CSV as a Universal Health Signal: A Low-Cost GSR System for Accessible Telehealth", pub: "IEEE International Biomedical Instrumentation and Technology Conference." },
+  { year: "2025", title: "From Training and Motivation to Entrepreneurial Intention: Unpacking the Role of Educational Mediation in University Entrepreneurship", pub: "Indonesian Journal of Business and Entrepreneurship Research, 3(2), 79–93." },
+  { year: "2025", title: "Implementasi Literasi Pemanfaatan Artificial Intelligence untuk Peningkatan Kompetensi Guru di SMK Negeri 2 Surakarta", pub: "SEMAR, 14(2)." },
+  { year: "2024", title: "Enhanced U-Net Models with Encoder and Augmentation for Phytoplankton Segmentation", pub: "International Journal of Advances in Applied Sciences, 13(4), 1009–1018." },
+  { year: "2024", title: "Enhanced You Only Look Once Approach for Automatic Phytoplankton Identification", pub: "IAES International Journal of Artificial Intelligence, 13(3), 3426–3436." },
+  { year: "2024", title: "VR Anima Safari Application with Design Thinking and Usability Testing Method", pub: "IEEE ICEECIT 2024." },
+  { year: "2024", title: "Assessing Usability in Immersive Javanese Script Learning: A System Usability Scale Evaluation of Virtual Reality Applications", pub: "IEEE ICIC 2024, 1–5." },
+  { year: "2024", title: "Pengembangan Aplikasi Augmented Reality sebagai Media Edukasi Pertanian Porang untuk Masyarakat", pub: "Indonesian Journal of Applied Informatics, 9(1), 45–56." },
+  { year: "2024", title: "Analysis of User Acceptance in Fire Extinguisher Simulation Applications with Virtual Reality Technology", pub: "Procedia Computer Science, 234, 1785–1790." },
+  { year: "2022", title: "Deep Learning Methods for Plankton Identification: A Bibliometric Analysis and General Review", pub: "International Conference on Smart Technology, Applied Informatics and Engineering." },
+  { year: "2022", title: "Virtual Reality Exposure Therapy for Acrophobia: Designing a Game Application", pub: "Indonesian Journal of Applied Informatics, 6(2), 80–87." },
+  { year: "2021", title: "Implementation of the Lokananta Records Surakarta Virtual Museum as a Promotional and Educational Media", pub: "Indonesian Journal of Applied Informatics, 6(1), 39–48." },
+  { year: "2021", title: "Designing a Mobile Application for Financial Management Using Mudarabah and Murabahah Contracts Based on Clustering Method", pub: "Indonesian Journal of Applied Informatics, 6(1), 1–13." },
+  { year: "2020", title: "Sistem Informasi Manajemen Logistik dan Peralatan Studi Kasus BPBD Kabupaten Wonogiri", pub: "Indonesian Journal of Applied Informatics, 4(1), 36–46." },
+  { year: "2018", title: "Enhancing Usability Using Near Field Communication for Mobile Application", pub: "MATEC Web of Conferences, 154, 03013." },
+  { year: "2017", title: "Perancangan dan Pembuatan Aplikasi Sistem Informasi Desa Desa Ngemplak Sukoharjo", pub: "Semnasteknomedia Online, 5(1)." }
 ];
 ---
 
-<BaseLayout title="Publications | Ovide Academy">
+<BaseLayout title="Publications | Dr. Ovide Decroly">
   <section class="bg-white border-b border-slate-200 py-12">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <span class="flat-badge mb-2">Publikasi Ilmiah</span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
-        Scholarly Publications & Papers
-      </h1>
-      <p class="text-base text-slate-600">
-        Daftar publikasi jurnal internasional, prosiding konferensi, dan karya ilmiah Dr. Ovide Decroly Wisnu Ardhi.
-      </p>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+      <div>
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-800">Daftar Publikasi Ilmiah</span>
+        <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-1 mb-2">
+          Scholarly Publications & Papers
+        </h1>
+        <p class="text-sm text-slate-600 max-w-2xl leading-relaxed">
+          Publikasi jurnal ilmiah internasional/nasional, prosiding konferensi IEEE/AIP/Elsevier Procedia, dan book chapter.
+        </p>
+      </div>
+      <a href="/cv" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-md border border-slate-300 transition-colors shrink-0">
+        <Icons name="download" class="w-3.5 h-3.5" />
+        <span>Unduh CV Lengkap</span>
+      </a>
     </div>
   </section>
 
   <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
     <div class="space-y-4">
       {publications.map((pub) => (
-        <div class="flat-card p-6">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="font-mono text-xs text-emerald-800 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">{pub.date}</span>
+        <div class="bg-white border border-slate-200 rounded-lg p-5 hover:border-emerald-600 transition-colors">
+          <div class="flex items-center gap-2 mb-1.5">
+            <span class="font-mono text-xs text-emerald-800 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">{pub.year}</span>
             <span class="text-xs text-slate-400">•</span>
-            <span class="text-xs font-semibold text-slate-500">{pub.publisher}</span>
+            <span class="text-xs font-semibold text-slate-600 italic">{pub.pub}</span>
           </div>
-          <h3 class="font-extrabold text-lg text-slate-900 mb-2 leading-snug">
+          <h3 class="font-extrabold text-base text-slate-900 leading-snug">
             {pub.title}
           </h3>
-          <p class="text-xs font-mono font-medium text-emerald-700 mb-3">
-            {pub.authors}
-          </p>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            {pub.desc}
+          <p class="text-xs font-mono text-slate-500 mt-1">
+            Dr. Ovide Decroly Wisnu Ardhi, S.T., M.Eng.
           </p>
         </div>
       ))}

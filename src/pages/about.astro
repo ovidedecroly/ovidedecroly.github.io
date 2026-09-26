@@ -19,7 +19,20 @@ import Icons from '../components/Icons.astro';
   <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
     <div class="space-y-8 text-slate-700 leading-relaxed text-sm">
       
-      <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl">
+      <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div>
+          <h2 class="text-base font-extrabold text-slate-900 mb-1">Curriculum Vitae Resmi</h2>
+          <p class="text-xs text-slate-600">
+            Lihat rekam jejak akademik lengkap, riwayat pendidikan, penelitian didanai, publikasi Scopus/Google Scholar, dan HKI.
+          </p>
+        </div>
+        <a href="/cv" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs rounded-md shadow-xs transition-colors shrink-0">
+          <Icons name="download" class="w-4 h-4" />
+          <span>Buka & Export PDF CV</span>
+        </a>
+      </div>
+
+      <div class="p-6 bg-white border border-slate-200 rounded-xl">
         <h2 class="text-base font-extrabold text-slate-900 mb-2">Tentang Ovide Academy</h2>
         <p class="text-xs text-slate-600 leading-relaxed">
           <strong>Ovide Academy</strong> merupakan platform akademik dan repositori riset terbuka yang dirancang oleh <strong>Dr. Ovide Decroly Wisnu Ardhi, S.T., M.Eng.</strong> untuk membagikan catatan penelitian terapan, buku teks ilmiah, materi kuliah, dan pemikiran seputar kecerdasan buatan bagi kemaslahatan masyarakat.

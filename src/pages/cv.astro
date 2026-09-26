@@ -1,0 +1,433 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icons from '../components/Icons.astro';
+
+// Complete CV Data exactly from the original document
+const cvData = {
+  name: "Dr. Ovide Decroly Wisnu Ardhi, S.T., M.Eng.",
+  title: "CURRICULUM VITAE",
+  institution: "Program Studi Sarjana Terapan (D4) Teknologi Informasi dan Kecerdasan Artifisial",
+  faculty: "Sekolah Vokasi, Universitas Sebelas Maret, Surakarta, Indonesia",
+  email: "ovide@staff.uns.ac.id",
+  phone: "+62 822-2031-0004",
+  scopusId: "57960725900",
+  scopusUrl: "https://www.scopus.com/authid/detail.uri?authorId=57960725900",
+  scholarUrl: "https://scholar.google.com/citations?user=ovidedecroly",
+  nuptk: "9835764665131062",
+  nidn: "0603058601",
+  nip: "1986050320130201",
+  
+  profile: "Akademisi dan praktisi teknologi informasi dengan latar doktoral Sistem Informasi serta pendidikan sarjana dan magister Teknik Elektro. Memiliki pengalaman dalam pengembangan sistem informasi, pengolahan dan integrasi data, infrastruktur jaringan, analitik data, kecerdasan artifisial, serta evaluasi aplikasi digital. Rekam jejak penelitian dan implementasi mencakup sistem informasi lintas proses, RFID-ANPR, Internet of Things, aplikasi web dan mobile, layanan berbasis cloud, serta pengelolaan data penelitian. Kegiatan akademik dan profesional dilaksanakan melalui kolaborasi lintas disiplin dengan perhatian pada kualitas data, keandalan sistem, dokumentasi teknis, dan kebutuhan pengguna.",
+
+  competencies: [
+    { title: "Sistem informasi dan data", desc: "Analisis kebutuhan, pemodelan proses, perancangan sistem informasi, pengelolaan data, basis data, metadata, kualitas data, dan dokumentasi teknis." },
+    { title: "Integrasi aplikasi", desc: "Pengembangan aplikasi web dan mobile, REST API, pertukaran data berbasis JSON, SQL, autentikasi, pencatatan aktivitas, monitoring, dan pengelolaan versi." },
+    { title: "Infrastruktur digital", desc: "Jaringan komputer, komunikasi data, cloud computing, Internet of Things, integrasi perangkat dan aplikasi, serta penyusunan spesifikasi teknis." },
+    { title: "Analisis dan evaluasi", desc: "Pemetaan proses dan kebutuhan pengguna, design thinking, usability testing, HEART Metrics, System Usability Scale, dan evaluasi kinerja sistem." },
+    { title: "Data dan kecerdasan artifisial", desc: "Python, analisis data, machine learning, deep learning, computer vision, evaluasi model, kualitas dataset, dan keterlacakan eksperimen." },
+    { title: "Bioenvironmental Informatics & Kolaborasi", desc: "Pengalaman bekerja dengan bidang informatika, teknik, bio-lingkungan, kesehatan, pendidikan, layanan publik, dan pengguna nonteknis." }
+  ],
+
+  experience: [
+    {
+      role: "Dosen Program Studi Sarjana Terapan Teknologi Informasi dan Kecerdasan Artifisial",
+      org: "Sekolah Vokasi, Universitas Sebelas Maret",
+      desc: "Pengajaran, pembimbingan, penelitian, dan pengembangan terapan pada sistem informasi, jaringan komputer, data dan teknologi informasi, kecerdasan artifisial, computer vision, aplikasi mobile, serta inovasi digital."
+    },
+    {
+      role: "Anggota Tim Teknis Pengadaan Peralatan Pengembangan ICT",
+      org: "Universitas Sebelas Maret (Tahun 2013)",
+      desc: "Ditugaskan berdasarkan Keputusan Rektor Universitas Sebelas Maret Nomor 321/UN27/KP/2013. Mendukung pelaksanaan pekerjaan pengadaan ICT yang kompleks, termasuk penyusunan spesifikasi teknis dan Harga Perkiraan Sendiri, pemberian arahan/masukan teknis kepada pejabat pembuat komitmen, serta monitoring dan evaluasi pelaksanaan pengadaan. Pengalaman ini relevan sebagai fondasi pemahaman infrastruktur bersama, standardisasi teknis, dokumentasi kebutuhan, akuntabilitas, dan koordinasi lintas unit dalam layanan digital."
+    }
+  ],
+
+  education: [
+    {
+      period: "2022–2026",
+      degree: "Doktor Sistem Informasi",
+      univ: "Universitas Diponegoro",
+      thesis: "Disertasi: Identifikasi Plankton pada Citra Mikroskopis Berbasis Deep Learning. 2026."
+    },
+    {
+      period: "2008–2011",
+      degree: "Magister Teknik Elektro / Teknologi Informasi",
+      univ: "Universitas Gadjah Mada",
+      thesis: "Tesis: Desain situs yang user-friendly bagi penderita buta warna. 2011."
+    },
+    {
+      period: "2003–2008",
+      degree: "Sarjana Teknik Elektro",
+      univ: "Universitas Islam Indonesia",
+      thesis: "Tugas akhir mengenai desain dan aplikasi antena wireless LAN. 2008."
+    }
+  ],
+
+  researchTrack: [
+    { year: "2026", title: "EXAIRSENSE: Explainable Edge AI and Virtual Sensing for Low-Cost Air Quality Monitoring in Tropical Smart Campus Environments", schema: "Penelitian Kolaborasi Internasional Top 100 Batch 2", role: "Anggota", fund: "Rp100.000.000", contract: "973.1/UN27.22/PT.01.03/2026" },
+    { year: "2026", title: "Prototipe Sistem Gate Otomatis Terintegrasi RFID-ANPR untuk Digitalisasi Keamanan dan Manajemen Lalu Lintas Kendaraan di Lingkungan UNS", schema: "Program Inovasi Teknologi Batch 2", role: "Anggota", fund: "Rp90.000.000", contract: "983.1/UN27.22/PT.01.03/2026" },
+    { year: "2026", title: "Pengembangan Media Edukasi ARecycle untuk Pengelolaan Sampah dan Pendidikan Perilaku Hidup Sehat", schema: "Penguatan Kapasitas Grup Riset B", role: "Anggota", fund: "Rp48.000.000", contract: "462/UN27.22/PT.01.03/2026" },
+    { year: "2025", title: "Development and Analysis of the MARITOPIA Virtual Reality Application for Underwater World Exploration", schema: "Penguatan Kapasitas Grup Riset B", role: "Anggota", fund: "Rp60.000.000", contract: "371/UN27.22/PT.01.03/2025" },
+    { year: "2024", title: "Hybrid Convolutional Neural Network dan Transformer Attention untuk Identifikasi Plankton", schema: "Penelitian Disertasi Doktor", role: "Ketua", fund: "Rp40.000.000", contract: "Bukti CV sumber" },
+    { year: "2024", title: "Analisis dan Pengembangan Aplikasi Anima Safari Berbasis Virtual Reality", schema: "Penelitian Hibah Grup Riset B", role: "Anggota", fund: "Belum tercantum", contract: "194.2/UN27.22/PT.01.03/2024" },
+    { year: "2023", title: "Hybrid CNN dan Vision Transformer Attention untuk Identifikasi Plankton", schema: "Penelitian Disertasi Doktor", role: "Ketua", fund: "Rp40.000.000", contract: "Bukti CV sumber" },
+    { year: "2022", title: "Perancangan dan Implementasi Aplikasi VR Museum Keris Nusantara dengan Metode MDLC", schema: "Penelitian Hibah Grup Riset B", role: "Anggota", fund: "Rp20.000.000", contract: "254/UN27.22/PT.01.03/2022" },
+    { year: "2021", title: "Virtual Reality Exposure Therapy pada Fobia Ketinggian", schema: "Penelitian Hibah Grup Riset", role: "Ketua/Pengusul", fund: "Belum tercantum", contract: "260/UN27.22/HK.07.00/2021" },
+    { year: "2021", title: "Optimalisasi Google Workspace untuk Pendidikan", schema: "Penulisan Buku; tercatat sebagai Penelitian", role: "Ketua/Pengusul", fund: "Belum tercantum", contract: "260/UN27.22/HK.07.00/2021" },
+    { year: "2021", title: "Pengukuran Detak Jantung Janin Menggunakan Android dengan Algoritma Wavelet dan Clustering", schema: "Penelitian Hibah Grup Riset", role: "Anggota", fund: "Rp14.110.000", contract: "260/UN27.22/HK.07.00/2021" },
+    { year: "2020", title: "Pembuatan dan Evaluasi Virtual Museum Lokananta Surakarta dengan Teknologi Virtual Reality", schema: "Hibah Penelitian Grup Riset", role: "Anggota", fund: "Rp15.000.000", contract: "452/UN27.21/PN/2020" },
+    { year: "2019", title: "Pembuatan Games Edukasi Pengenalan Fosil Purba Sangiran dengan Augmented Reality", schema: "Penelitian Mandiri", role: "Anggota", fund: "Mandiri", contract: "Tidak tercantum" },
+    { year: "2018", title: "Pengembangan Metode Pembelajaran Game Based Learning untuk Siswa Sekolah Dasar", schema: "Penelitian Sosial Humaniora dan Pendidikan", role: "Anggota", fund: "Rp70.000.000", contract: "Tidak tercantum" },
+    { year: "2017", title: "Pengembangan Metode Pembelajaran Game Based Learning untuk Siswa Sekolah Dasar", schema: "Penelitian Sosial Humaniora dan Pendidikan", role: "Anggota", fund: "Rp75.000.000", contract: "Tidak tercantum" },
+    { year: "2016", title: "Pemanfaatan Game Berbasis Mobile sebagai Upaya Pelestarian Budaya Daerah Indonesia", schema: "Hibah Peneliti Utama sebagai Rujukan", role: "Anggota", fund: "Rp26.500.000", contract: "Tidak tercantum" }
+  ],
+
+  communityService: [
+    { year: "2026", title: "Implementasi Aplikasi ARecycle dalam Pendidikan Kesadaran Lingkungan Hidup dengan Teknologi Augmented Reality", schema: "Pengabdian kepada Masyarakat Hibah Grup Riset", role: "Anggota", fund: "Rp10.000.000", contract: "463/UN27.22/PT.01.03/2026" },
+    { year: "2025", title: "Peningkatan Literasi Teknologi Artificial Intelligence dan Immersive dalam Pendidikan", schema: "Pengabdian kepada Masyarakat Hibah Grup Riset", role: "Anggota", fund: "Rp10.000.000", contract: "370/UN27.22/PT.01.03/2025" },
+    { year: "2024", title: "Peningkatan Literasi Teknologi dalam Optimalisasi Pembelajaran dengan Artificial Intelligence", schema: "Pengabdian kepada Masyarakat Hibah Grup Riset", role: "Anggota", fund: "Belum tercantum", contract: "195.1/UN27.22/PT.01.03/2024" },
+    { year: "2022", title: "Inovasi Media Pembelajaran Anak Kearifan Lokal Berbasis Teknologi Augmented Reality", schema: "Pengabdian kepada Masyarakat Hibah Grup Riset", role: "Anggota", fund: "Rp10.000.000", contract: "255/UN27.22/PM.01.01/2022" },
+    { year: "2021", title: "Implementasi Virtual Reality Exposure Therapy pada Fobia Ketinggian", schema: "Pengabdian kepada Masyarakat Hibah Grup Riset", role: "Ketua/Pengusul", fund: "Belum tercantum", contract: "261/UN27.22/HK.07.00/2021" },
+    { year: "2020", title: "Pemberdayaan Masyarakat melalui Virtual Museum Lokananta Surakarta", schema: "Hibah Pengabdian Grup Riset", role: "Anggota", fund: "Rp5.000.000", contract: "453/UN27.21/PN/2020" },
+    { year: "2017", title: "Implementasi Receptionist Aplikasi Informasi Siswa Berbasis Android", schema: "Iptek bagi Masyarakat", role: "Anggota", fund: "Rp29.000.000", contract: "Tidak tercantum" },
+    { year: "2016", title: "Implementasi Sistem Informasi Akademik di SMK untuk Peningkatan Monitoring Akademis Siswa", schema: "Iptek bagi Masyarakat", role: "Anggota", fund: "Rp25.875.000", contract: "Tidak tercantum" }
+  ],
+
+  hki: [
+    { title: "PlanktoScan (2025)", type: "Program Komputer", number: "EC002025209701", desc: "Perangkat lunak untuk pengelolaan citra plankton, inferensi model, visualisasi, dan analisis; Ovide Decroly Wisnu Ardhi tercantum sebagai salah satu pencipta." },
+    { title: "Dataset Segmentasi Fitoplankton Perairan Belitung (2024)", type: "Basis Data", number: "EC002024244169", desc: "Dataset citra mikroskopis dan anotasi segmentasi untuk penelitian yang dapat direproduksi; Ovide Decroly Wisnu Ardhi tercantum sebagai salah satu pencipta." },
+    { title: "Aplikasi ViRetA Virtual Reality Exposure Therapy Acrophobia (2022)", type: "Program Komputer", number: "EC00202284238", desc: "Aplikasi virtual reality untuk terapi penderita acrophobia." },
+    { title: "Aplikasi SiBOLA Sistem Informasi Pemain Sepak Bola (2021)", type: "Program Komputer", number: "EC00202132907", desc: "Aplikasi web yang menyajikan profil dan atribut kemampuan pemain, memonitor perkembangan kemampuan, serta memberikan rekomendasi starting eleven menggunakan metode Simple Additive Weighting." },
+    { title: "Aplikasi Sistem Informasi Mudharabah SIMUDA (2020)", type: "Program Komputer", number: "EC00202024112", desc: "Aplikasi Android untuk mengelola transaksi investasi mudharabah dan memberi anggota BMT akses terhadap layanan investasi dan layanan terkait." }
+  ],
+
+  publications: [
+    { year: "2026", title: "Plant Disease Object Detection on PlantDoc Using YOLO26n", pub: "Sisfo: Jurnal Ilmiah Sistem Informasi, 10(1), 187–197." },
+    { year: "2026", title: "Analyzing User Acceptance of Augmented Reality Applications for Traditional Musical Instrument Recognition in Indonesia", pub: "AIP Conference Proceedings, 3411(1), 060007." },
+    { year: "2026", title: "Maritopia: A VR-Based Underwater Learning Experience Evaluated Through HEART Metric and Design Thinking Methodology", pub: "Procedia Computer Science, 284, 1093–1100." },
+    { year: "2026", title: "Augmented Reality Applications for Zoos: Enhancing Visitor Engagement Through Interactive Animal Categorization and Conservation Awareness", pub: "Procedia Computer Science, 284, 1233–1240." },
+    { year: "2026", title: "AI Integration for Irrigation Optimization", pub: "Handbook of Artificial Intelligence in Water Management." },
+    { year: "2026", title: "Decarbonization in the Nexus of Waste–Food and Energy Using Digital Technologies", pub: "Climate Change Impacts on the Water-Energy-Food Nexus, 437–494." },
+    { year: "2025", title: "CSV as a Universal Health Signal: A Low-Cost GSR System for Accessible Telehealth", pub: "IEEE International Biomedical Instrumentation and Technology Conference." },
+    { year: "2025", title: "From Training and Motivation to Entrepreneurial Intention: Unpacking the Role of Educational Mediation in University Entrepreneurship", pub: "Indonesian Journal of Business and Entrepreneurship Research, 3(2), 79–93." },
+    { year: "2025", title: "Implementasi Literasi Pemanfaatan Artificial Intelligence untuk Peningkatan Kompetensi Guru di SMK Negeri 2 Surakarta", pub: "SEMAR, 14(2)." },
+    { year: "2024", title: "Enhanced U-Net Models with Encoder and Augmentation for Phytoplankton Segmentation", pub: "International Journal of Advances in Applied Sciences, 13(4), 1009–1018." },
+    { year: "2024", title: "Enhanced You Only Look Once Approach for Automatic Phytoplankton Identification", pub: "IAES International Journal of Artificial Intelligence, 13(3), 3426–3436." },
+    { year: "2024", title: "VR Anima Safari Application with Design Thinking and Usability Testing Method", pub: "IEEE ICEECIT 2024." },
+    { year: "2024", title: "Assessing Usability in Immersive Javanese Script Learning: A System Usability Scale Evaluation of Virtual Reality Applications", pub: "IEEE ICIC 2024, 1–5." },
+    { year: "2024", title: "Pengembangan Aplikasi Augmented Reality sebagai Media Edukasi Pertanian Porang untuk Masyarakat", pub: "Indonesian Journal of Applied Informatics, 9(1), 45–56." },
+    { year: "2024", title: "Analysis of User Acceptance in Fire Extinguisher Simulation Applications with Virtual Reality Technology", pub: "Procedia Computer Science, 234, 1785–1790." },
+    { year: "2022", title: "Deep Learning Methods for Plankton Identification: A Bibliometric Analysis and General Review", pub: "International Conference on Smart Technology, Applied Informatics and Engineering." },
+    { year: "2022", title: "Virtual Reality Exposure Therapy for Acrophobia: Designing a Game Application", pub: "Indonesian Journal of Applied Informatics, 6(2), 80–87." },
+    { year: "2021", title: "Implementation of the Lokananta Records Surakarta Virtual Museum as a Promotional and Educational Media", pub: "Indonesian Journal of Applied Informatics, 6(1), 39–48." },
+    { year: "2021", title: "Designing a Mobile Application for Financial Management Using Mudarabah and Murabahah Contracts Based on Clustering Method", pub: "Indonesian Journal of Applied Informatics, 6(1), 1–13." },
+    { year: "2020", title: "Sistem Informasi Manajemen Logistik dan Peralatan Studi Kasus BPBD Kabupaten Wonogiri", pub: "Indonesian Journal of Applied Informatics, 4(1), 36–46." },
+    { year: "2018", title: "Enhancing Usability Using Near Field Communication for Mobile Application", pub: "MATEC Web of Conferences, 154, 03013." },
+    { year: "2017", title: "Perancangan dan Pembuatan Aplikasi Sistem Informasi Desa Desa Ngemplak Sukoharjo", pub: "Semnasteknomedia Online, 5(1)." }
+  ],
+
+  courses: [
+    "Statistika dan Probabilitas", "Literasi Data dan Teknologi Informasi",
+    "Literasi Internet dan Data", "Komunikasi Nirkabel",
+    "Komunikasi Data", "Jaringan Komputer",
+    "Praktikum Jaringan Komputer", "Jaringan Komputer Enterprise",
+    "Praktikum Jaringan Komputer Enterprise", "Sistem Operasi",
+    "Praktikum Sistem Operasi", "Praktikum Cloud Computing",
+    "Struktur Data", "Praktikum Struktur Data",
+    "Praktikum Desain Web", "Proses Bisnis dan Sistem Informasi Manajemen",
+    "Praktikum Proses Bisnis dan Sistem Informasi Manajemen", "Multimedia Arab",
+    "Etika Profesi", "Metodologi Penelitian",
+    "Teknik Kompilasi", "Grafika Komputer",
+    "Praktikum Grafika Komputer", "Bahasa Rakitan",
+    "Praktikum Bahasa Rakitan", "Multimedia Lanjut",
+    "Multimedia", "Arsitektur Komputer",
+    "Teori Graf"
+  ]
+};
+---
+
+<BaseLayout title="Curriculum Vitae | Dr. Ovide Decroly Wisnu Ardhi">
+  
+  <!-- Export PDF / Print Action Header (Hidden on Print) -->
+  <div class="bg-white border-b border-slate-200 py-4 print:hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div>
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-800">Dokumen Resmi</span>
+        <h1 class="text-lg font-extrabold text-slate-900">Curriculum Vitae — Dr. Ovide Decroly Wisnu Ardhi</h1>
+      </div>
+      <button 
+        onclick="window.print()" 
+        class="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs rounded-md shadow-sm transition-all cursor-pointer"
+      >
+        <Icons name="download" class="w-4 h-4" />
+        <span>Export / Cetak PDF</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main CV Document Container -->
+  <main class="max-w-5xl mx-auto px-4 sm:px-8 py-8 sm:py-12 print:p-0 print:max-w-full">
+    
+    <div class="bg-white border border-slate-200 print:border-none rounded-xl p-8 sm:p-12 shadow-xs print:shadow-none space-y-10">
+      
+      <!-- Header Section -->
+      <div class="border-b-2 border-slate-900 pb-6">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          {cvData.name}
+        </h2>
+        <div class="text-xs font-mono uppercase font-bold text-emerald-800 tracking-widest mt-1 mb-2">
+          {cvData.title}
+        </div>
+        <p class="text-xs font-semibold text-slate-700">
+          {cvData.institution}
+        </p>
+        <p class="text-xs text-slate-600 mb-3">
+          {cvData.faculty}
+        </p>
+        
+        <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs font-mono text-slate-600 pt-2 border-t border-slate-200">
+          <span>Email: <a href={`mailto:${cvData.email}`} class="text-emerald-800 font-bold hover:underline">{cvData.email}</a></span>
+          <span>•</span>
+          <span>Telepon: <span class="text-slate-800 font-semibold">{cvData.phone}</span></span>
+          <span>•</span>
+          <span>Scopus Author ID: <a href={cvData.scopusUrl} target="_blank" rel="noopener" class="text-emerald-800 font-bold hover:underline">{cvData.scopusId}</a></span>
+          <span>•</span>
+          <span><a href={cvData.scholarUrl} target="_blank" rel="noopener" class="text-emerald-800 font-bold hover:underline">Google Scholar</a></span>
+        </div>
+
+        <div class="flex flex-wrap gap-x-4 gap-y-1 text-[11px] font-mono text-slate-500 mt-2">
+          <span>NUPTK: {cvData.nuptk}</span>
+          <span>|</span>
+          <span>NIDN: {cvData.nidn}</span>
+          <span>|</span>
+          <span>NIP: {cvData.nip}</span>
+        </div>
+      </div>
+
+      <!-- Profil Profesional -->
+      <div>
+        <h3 class="text-base font-extrabold text-slate-900 uppercase tracking-wider mb-3 flex items-center gap-2">
+          <span>Profil Profesional</span>
+        </h3>
+        <p class="text-xs text-slate-700 leading-relaxed text-justify">
+          {cvData.profile}
+        </p>
+      </div>
+
+      <!-- Bidang Kompetensi -->
+      <div>
+        <h3 class="text-base font-extrabold text-slate-900 uppercase tracking-wider mb-3">
+          Bidang Kompetensi
+        </h3>
+        <div class="border border-slate-200 rounded-lg overflow-hidden">
+          <table class="w-full text-xs text-left">
+            <tbody class="divide-y divide-slate-200">
+              {cvData.competencies.map(item => (
+                <tr class="divide-x divide-slate-200">
+                  <td class="w-1/3 p-3 font-bold text-slate-900 bg-slate-50/70 align-top">
+                    {item.title}
+                  </td>
+                  <td class="p-3 text-slate-700 leading-relaxed">
+                    {item.desc}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Pengalaman Profesional dan Kelembagaan -->
+      <div>
+        <h3 class="text-base font-extrabold text-slate-900 uppercase tracking-wider mb-3">
+          Pengalaman Profesional dan Kelembagaan
+        </h3>
+        <div class="space-y-4 text-xs">
+          {cvData.experience.map(exp => (
+            <div class="border-l-2 border-emerald-700 pl-4 py-1">
+              <h4 class="font-extrabold text-slate-900 text-sm">{exp.role}</h4>
+              <p class="font-semibold text-emerald-800 mb-1">{exp.org}</p>
+              <p class="text-slate-600 leading-relaxed text-justify">{exp.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Pendidikan -->
+      <div>
+        <h3 class="text-base font-extrabold text-slate-900 uppercase tracking-wider mb-3">
+          Pendidikan
+        </h3>
+        <div class="border border-slate-200 rounded-lg overflow-hidden">
+          <table class="w-full text-xs text-left">
+            <tbody class="divide-y divide-slate-200">
+              {cvData.education.map(edu => (
+                <tr class="divide-x divide-slate-200">
+                  <td class="w-28 p-3 font-mono font-bold text-emerald-800 bg-slate-50/70 align-top">
+                    {edu.period}
+                  </td>
+                  <td class="p-3">
+                    <span class="font-extrabold text-slate-900 block">{edu.degree} | {edu.univ}</span>
+                    <span class="text-slate-600 text-xs italic mt-0.5 block">{edu.thesis}</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Rekam Jejak Penelitian yang Diterima dan Didanai -->
+      <div>
+        <h3 class="text-base font-extrabold text-slate-900 uppercase tracking-wider mb-3">
+          Rekam Jejak Penelitian yang Diterima dan Didanai
+        </h3>
+        <div class="border border-slate-200 rounded-lg overflow-x-auto">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-900 text-white font-mono text-[11px] uppercase">
+              <tr>
+                <th class="p-2.5 w-16">Tahun</th>
+                <th class="p-2.5">Judul dan Skema</th>
+                <th class="p-2.5 w-24">Peran</th>
+                <th class="p-2.5 w-28">Dana</th>
+                <th class="p-2.5 w-36">Kontrak</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              {cvData.researchTrack.map((item, idx) => (
+                <tr class={idx % 2 === 0 ? "bg-white" : "bg-slate-50/50"}>
+                  <td class="p-2.5 font-mono font-bold text-slate-800 align-top">{item.year}</td>
+                  <td class="p-2.5 align-top">
+                    <span class="font-bold text-slate-900 block leading-snug">{item.title}</span>
+                    <span class="text-[11px] text-emerald-800 italic block mt-0.5">{item.schema}</span>
+                  </td>
+                  <td class="p-2.5 font-medium text-slate-700 align-top">{item.role}</td>
+                  <td class="p-2.5 font-mono text-slate-800 align-top">{item.fund}</td>
+                  <td class="p-2.5 font-mono text-[11px] text-slate-600 align-top break-all">{item.contract}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Rekam Jejak Pengabdian kepada Masyarakat -->
+      <div>
+        <h3 class="text-base font-extrabold text-slate-900 uppercase tracking-wider mb-3">
+          Rekam Jejak Pengabdian kepada Masyarakat
+        </h3>
+        <div class="border border-slate-200 rounded-lg overflow-x-auto">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-900 text-white font-mono text-[11px] uppercase">
+              <tr>
+                <th class="p-2.5 w-16">Tahun</th>
+                <th class="p-2.5">Judul dan Skema</th>
+                <th class="p-2.5 w-24">Peran</th>
+                <th class="p-2.5 w-28">Dana</th>
+                <th class="p-2.5 w-36">Kontrak</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              {cvData.communityService.map((item, idx) => (
+                <tr class={idx % 2 === 0 ? "bg-white" : "bg-slate-50/50"}>
+                  <td class="p-2.5 font-mono font-bold text-slate-800 align-top">{item.year}</td>
+                  <td class="p-2.5 align-top">
+                    <span class="font-bold text-slate-900 block leading-snug">{item.title}</span>
+                    <span class="text-[11px] text-emerald-800 italic block mt-0.5">{item.schema}</span>
+                  </td>
+                  <td class="p-2.5 font-medium text-slate-700 align-top">{item.role}</td>
+                  <td class="p-2.5 font-mono text-slate-800 align-top">{item.fund}</td>
+                  <td class="p-2.5 font-mono text-[11px] text-slate-600 align-top break-all">{item.contract}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Hak Kekayaan Intelektual dan Luaran Digital -->
+      <div>
+        <h3 class="text-base font-extrabold text-slate-900 uppercase tracking-wider mb-3">
+          Hak Kekayaan Intelektual dan Luaran Digital
+        </h3>
+        <ul class="space-y-3 text-xs">
+          {cvData.hki.map(h => (
+            <li class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-bold text-slate-900 text-sm">{h.title}</span>
+                <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded text-[10px] font-mono font-bold uppercase">{h.type}</span>
+                <span class="font-mono text-[11px] text-slate-500">({h.number})</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">{h.desc}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Publikasi Terpilih -->
+      <div>
+        <h3 class="text-base font-extrabold text-slate-900 uppercase tracking-wider mb-3">
+          Publikasi Terpilih Berdasarkan Profil Google Scholar & Scopus
+        </h3>
+        <div class="border border-slate-200 rounded-lg overflow-hidden">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-900 text-white font-mono text-[11px] uppercase">
+              <tr>
+                <th class="p-2.5 w-16">Tahun</th>
+                <th class="p-2.5">Judul</th>
+                <th class="p-2.5 w-1/3">Publikasi</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              {cvData.publications.map((p, idx) => (
+                <tr class={idx % 2 === 0 ? "bg-white" : "bg-slate-50/50"}>
+                  <td class="p-2.5 font-mono font-bold text-slate-800 align-top">{p.year}</td>
+                  <td class="p-2.5 font-bold text-slate-900 align-top leading-snug">{p.title}</td>
+                  <td class="p-2.5 text-slate-600 italic align-top">{p.pub}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mata Kuliah yang Pernah Diampu -->
+      <div>
+        <h3 class="text-base font-extrabold text-slate-900 uppercase tracking-wider mb-3">
+          Mata Kuliah yang Pernah Diampu
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-xs">
+          {cvData.courses.map(c => (
+            <div class="p-2 bg-slate-50 border border-slate-200 rounded text-slate-700 flex items-center gap-1.5">
+              <span class="text-emerald-700 font-bold">•</span>
+              <span>{c}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Profil Ilmiah Ringkas -->
+      <div class="pt-4 border-t border-slate-200 text-xs text-slate-600 font-mono space-y-1">
+        <p><strong>Google Scholar:</strong> Ovide Decroly Wisnu Ardhi — 36 sitasi dan h-index 4 per September 2026.</p>
+        <p><strong>Scopus:</strong> Author ID 57960725900, afiliasi Universitas Sebelas Maret.</p>
+      </div>
+
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  header, footer, nav, button {
+    display: none !important;
+  }
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+}
+</style>

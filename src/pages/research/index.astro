@@ -3,65 +3,84 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Icons from '../../components/Icons.astro';
 
 const researchProjects = [
-  {
-    title: "AI-Based Visual Analysis for Plankton Images",
-    date: "07 Juni 2026",
-    category: "Bioenvironmental Informatics",
-    slug: "/research/plankton-visual-ai",
-    desc: "Deteksi dan klasifikasi plankton otomatis pada citra mikroskopik menggunakan deep learning dan arsitektur YOLO mutakhir untuk pemantauan ekosistem perairan.",
-    tags: ["Bioinformatics", "Plankton", "YOLO", "Microscopy", "Deep Learning"]
-  }
+  { year: "2026", title: "EXAIRSENSE: Explainable Edge AI and Virtual Sensing for Low-Cost Air Quality Monitoring in Tropical Smart Campus Environments", schema: "Penelitian Kolaborasi Internasional Top 100 Batch 2", role: "Anggota", fund: "Rp100.000.000" },
+  { year: "2026", title: "Prototipe Sistem Gate Otomatis Terintegrasi RFID-ANPR untuk Digitalisasi Keamanan dan Manajemen Lalu Lintas Kendaraan di Lingkungan UNS", schema: "Program Inovasi Teknologi Batch 2", role: "Anggota", fund: "Rp90.000.000" },
+  { year: "2026", title: "Pengembangan Media Edukasi ARecycle untuk Pengelolaan Sampah dan Pendidikan Perilaku Hidup Sehat", schema: "Penguatan Kapasitas Grup Riset B", role: "Anggota", fund: "Rp48.000.000" },
+  { year: "2025", title: "Development and Analysis of the MARITOPIA Virtual Reality Application for Underwater World Exploration", schema: "Penguatan Kapasitas Grup Riset B", role: "Anggota", fund: "Rp60.000.000" },
+  { year: "2024", title: "Hybrid Convolutional Neural Network dan Transformer Attention untuk Identifikasi Plankton", schema: "Penelitian Disertasi Doktor", role: "Ketua", fund: "Rp40.000.000" },
+  { year: "2024", title: "Analisis dan Pengembangan Aplikasi Anima Safari Berbasis Virtual Reality", schema: "Penelitian Hibah Grup Riset B", role: "Anggota", fund: "Didanai Hibah Riset" },
+  { year: "2023", title: "Hybrid CNN dan Vision Transformer Attention untuk Identifikasi Plankton", schema: "Penelitian Disertasi Doktor", role: "Ketua", fund: "Rp40.000.000" },
+  { year: "2022", title: "Perancangan dan Implementasi Aplikasi VR Museum Keris Nusantara dengan Metode MDLC", schema: "Penelitian Hibah Grup Riset B", role: "Anggota", fund: "Rp20.000.000" },
+  { year: "2021", title: "Virtual Reality Exposure Therapy pada Fobia Ketinggian", schema: "Penelitian Hibah Grup Riset", role: "Ketua/Pengusul", fund: "Didanai Hibah Riset" },
+  { year: "2021", title: "Optimalisasi Google Workspace untuk Pendidikan", schema: "Penulisan Buku; tercatat sebagai Penelitian", role: "Ketua/Pengusul", fund: "Didanai Hibah Riset" },
+  { year: "2021", title: "Pengukuran Detak Jantung Janin Menggunakan Android dengan Algoritma Wavelet dan Clustering", schema: "Penelitian Hibah Grup Riset", role: "Anggota", fund: "Rp14.110.000" },
+  { year: "2020", title: "Pembuatan dan Evaluasi Virtual Museum Lokananta Surakarta dengan Teknologi Virtual Reality", schema: "Hibah Penelitian Grup Riset", role: "Anggota", fund: "Rp15.000.000" }
+];
+
+const hkiList = [
+  { title: "PlanktoScan (2025)", type: "Program Komputer", number: "EC002025209701", desc: "Perangkat lunak untuk pengelolaan citra plankton, inferensi model, visualisasi, dan analisis." },
+  { title: "Dataset Segmentasi Fitoplankton Perairan Belitung (2024)", type: "Basis Data", number: "EC002024244169", desc: "Dataset citra mikroskopis dan anotasi segmentasi untuk penelitian yang dapat direproduksi." },
+  { title: "Aplikasi ViRetA Virtual Reality Exposure Therapy Acrophobia (2022)", type: "Program Komputer", number: "EC00202284238", desc: "Aplikasi virtual reality untuk terapi penderita acrophobia." },
+  { title: "Aplikasi SiBOLA Sistem Informasi Pemain Sepak Bola (2021)", type: "Program Komputer", number: "EC00202132907", desc: "Aplikasi web monitoring kemampuan pemain sepak bola berbasis Simple Additive Weighting." },
+  { title: "Aplikasi Sistem Informasi Mudharabah SIMUDA (2020)", type: "Program Komputer", number: "EC00202024112", desc: "Aplikasi Android untuk mengelola transaksi investasi mudharabah BMT." }
 ];
 ---
 
-<BaseLayout title="Research Projects | Dr. Ovide Decroly">
+<BaseLayout title="Research & HKI | Dr. Ovide Decroly">
   <section class="bg-white border-b border-slate-200 py-12">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-800">Laboratorium & Riset</span>
-      <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-1 mb-2">
-        Research Projects & Laboratories
-      </h1>
-      <p class="text-sm text-slate-600 max-w-2xl leading-relaxed">
-        Eksplorasi penelitian terapan di bidang Bioenvironmental Informatics, Computer Vision, YOLO, dan kecerdasan visual ilmiah.
-      </p>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+      <div>
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-800">Laboratorium & Hibah Riset</span>
+        <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-1 mb-2">
+          Research Projects & Patents
+        </h1>
+        <p class="text-sm text-slate-600 max-w-2xl leading-relaxed">
+          Rekam jejak penelitian terapan yang diterima dan didanai (Kemendikbudristek, UNS, Hibah Kolaborasi Internasional Top 100), serta Hak Kekayaan Intelektual (HKI).
+        </p>
+      </div>
+      <a href="/cv" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs rounded-md shadow-xs transition-colors shrink-0">
+        <Icons name="download" class="w-3.5 h-3.5" />
+        <span>Unduh CV Lengkap</span>
+      </a>
     </div>
   </section>
 
+  <!-- Research Projects Table -->
   <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <h2 class="text-xl font-extrabold text-slate-900 mb-6 pb-2 border-b border-slate-200">
+      Rekam Jejak Penelitian Didanai
+    </h2>
+    <div class="space-y-4">
       {researchProjects.map((item) => (
-        <article class="bg-white border border-slate-200 rounded-lg p-6 flex flex-col justify-between hover:border-emerald-600 transition-colors">
-          <div>
-            <div class="flex justify-between items-center text-xs mb-3">
-              <span class="font-mono text-slate-400 font-semibold">{item.date}</span>
-              <span class="px-2.5 py-0.5 bg-emerald-50 text-emerald-800 font-bold rounded font-mono text-[10px] border border-emerald-200">
-                {item.category}
-              </span>
-            </div>
-            <h3 class="font-extrabold text-lg text-slate-900 mb-2 leading-snug">
-              <a href={item.slug} class="hover:text-emerald-700 transition-colors">
-                {item.title}
-              </a>
-            </h3>
-            <p class="text-xs text-slate-600 leading-relaxed mb-4">
-              {item.desc}
-            </p>
+        <div class="bg-white border border-slate-200 rounded-lg p-5 hover:border-emerald-600 transition-colors">
+          <div class="flex justify-between items-center text-xs mb-1.5">
+            <span class="font-mono text-xs text-emerald-800 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">{item.year}</span>
+            <span class="font-mono text-slate-500 font-semibold">{item.fund}</span>
           </div>
+          <h3 class="font-extrabold text-base text-slate-900 leading-snug mb-1">
+            {item.title}
+          </h3>
+          <p class="text-xs text-slate-600 italic">
+            {item.schema} • <span class="font-semibold text-emerald-800">Peran: {item.role}</span>
+          </p>
+        </div>
+      ))}
+    </div>
 
-          <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
-            <div class="flex gap-1.5 flex-wrap">
-              {item.tags.map(t => (
-                <span class="text-[10px] font-mono bg-slate-50 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">
-                  #{t}
-                </span>
-              ))}
-            </div>
-            <a href={item.slug} class="text-xs font-bold text-emerald-800 hover:underline inline-flex items-center gap-1">
-              <span>View Research Note</span>
-              <Icons name="arrow-right" class="w-3.5 h-3.5" />
-            </a>
+    <!-- HKI Section -->
+    <h2 class="text-xl font-extrabold text-slate-900 mt-14 mb-6 pb-2 border-b border-slate-200">
+      Hak Kekayaan Intelektual (HKI) & Luaran Digital
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {hkiList.map((hki) => (
+        <div class="bg-white border border-slate-200 rounded-lg p-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="font-bold text-sm text-slate-900">{hki.title}</span>
+            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 font-mono text-[10px] font-bold rounded uppercase">{hki.type}</span>
           </div>
-        </article>
+          <p class="text-xs font-mono text-emerald-800 font-bold mb-2">No: {hki.number}</p>
+          <p class="text-xs text-slate-600 leading-relaxed">{hki.desc}</p>
+        </div>
       ))}
     </div>
   </section>

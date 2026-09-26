@@ -16,6 +16,7 @@ const currentPath = Astro.url.pathname;
 
 const navItems = [
   { name: "Overview", href: "/" },
+  { name: "Curriculum Vitae", href: "/cv" },
   { name: "Research", href: "/research" },
   { name: "Publications", href: "/publications" },
   { name: "Books", href: "/books" },
@@ -84,9 +85,9 @@ const navItems = [
 
         <!-- Right Action Button -->
         <div class="hidden sm:flex items-center gap-3">
-          <a href="/about" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-md transition-colors shadow-xs">
-            <span>Profile & CV</span>
-            <Icons name="arrow-right" class="w-3.5 h-3.5" />
+          <a href="/cv" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-md transition-colors shadow-xs">
+            <Icons name="download" class="w-3.5 h-3.5" />
+            <span>Curriculum Vitae</span>
           </a>
         </div>
 
