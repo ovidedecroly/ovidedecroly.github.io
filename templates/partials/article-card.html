@@ -1,10 +1,30 @@
-<article class="card">
-  <p class="card-date">{{ page.date | date(format="%d %B %Y") }}</p>
+<article class="article-card">
+  <div class="card-top-meta">
+    <span class="card-date">{{ page.date | date(format="%d %B %Y") }}</span>
+    {% if page.taxonomies.categories %}
+      <span class="card-category-badge">{{ page.taxonomies.categories[0] }}</span>
+    {% else %}
+      <span class="card-category-badge">Research</span>
+    {% endif %}
+  </div>
+
   <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
-  {% if page.description %}<p>{{ page.description }}</p>{% endif %}
-  {% if page.taxonomies.tags %}
-    <div class="tag-row small">
-      {% for tag in page.taxonomies.tags | slice(end=3) %}<span>{{ tag }}</span>{% endfor %}
-    </div>
+
+  {% if page.description %}
+    <p>{{ page.description }}</p>
   {% endif %}
+
+  <div class="card-footer">
+    <div class="card-tags">
+      {% if page.taxonomies.tags %}
+        {% for tag in page.taxonomies.tags %}
+          {% if loop.index <= 2 %}
+            <span class="tag-badge">#{{ tag }}</span>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <a class="read-link" href="{{ page.permalink }}">Read &rarr;</a>
+  </div>
 </article>

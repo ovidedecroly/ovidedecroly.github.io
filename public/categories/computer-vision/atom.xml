@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="id">
+    <title>Ovide Academy | Dr. Ovide Decroly Wisnu Ardhi - Computer Vision</title>
+    <subtitle>Ovide Academy is the personal academic website of Dr. Ovide Decroly Wisnu Ardhi, an Applied AI Researcher focusing on computer vision, deep learning, academic writing, and digital education.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://ovidedecroly.github.io/categories/computer-vision/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-06-08T00:00:00+00:00</updated>
+    <id>https://ovidedecroly.github.io/categories/computer-vision/atom.xml</id>
+    <entry xml:lang="id">
+        <title>YOLO untuk Deteksi Objek: Catatan Awal</title>
+        <published>2026-06-08T00:00:00+00:00</published>
+        <updated>2026-06-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io/blog/yolo-deteksi-objek/"/>
+        <id>https://ovidedecroly.github.io/blog/yolo-deteksi-objek/</id>
+        
+        <content type="html" xml:base="https://ovidedecroly.github.io/blog/yolo-deteksi-objek/">&lt;p&gt;YOLO adalah keluarga model deteksi objek yang banyak digunakan karena pendekatannya relatif cepat dan praktis. Model ini memprediksi lokasi objek dan kelas objek dalam satu proses inferensi.&lt;/p&gt;
+&lt;h2 id=&quot;kapan-yolo-cocok-digunakan&quot;&gt;Kapan YOLO cocok digunakan?&lt;a class=&quot;zola-anchor&quot; href=&quot;#kapan-yolo-cocok-digunakan&quot; aria-label=&quot;Anchor link for: kapan-yolo-cocok-digunakan&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;YOLO cocok untuk aplikasi yang membutuhkan deteksi cepat, seperti inspeksi visual, deteksi objek biologis, pemantauan lingkungan, sistem keamanan, dan prototipe computer vision berbasis web.&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>

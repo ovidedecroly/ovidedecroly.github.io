@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="AI-Based Visual Analysis for Plankton Images | Ovide Academy">
+  <section class="bg-white border-b border-slate-200 py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <a href="/research" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 mb-4 inline-block">&larr; Kembali ke Daftar Riset</a>
+      <div class="flex items-center gap-2 mb-2">
+        <span class="font-mono text-xs text-slate-400 font-semibold">07 Juni 2026</span>
+        <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded text-[11px] font-bold">Marine Vision AI</span>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-3">
+        AI-Based Visual Analysis for Plankton Images
+      </h1>
+      <p class="text-sm text-slate-600 leading-relaxed">
+        Catatan riset tentang deteksi plankton pada citra mikroskopik menggunakan deep learning.
+      </p>
+      <div class="flex gap-1.5 mt-4">
+        <span class="text-[11px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-200">#Plankton</span>
+        <span class="text-[11px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-200">#YOLO</span>
+        <span class="text-[11px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-200">#Deep Learning</span>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <div class="space-y-6 text-base text-slate-700 leading-relaxed">
+      <p>
+        Riset ini mengeksplorasi penggunaan model deteksi objek dan segmentasi citra untuk mengenali plankton pada citra mikroskopik. Tantangan utama riset ini meliputi variasi bentuk plankton yang sangat tinggi, adanya noise latar belakang air, transparansi spesimen, dan keterbatasan data latih berlabel.
+      </p>
+
+      <h2 class="text-xl font-extrabold text-slate-900 border-b border-slate-200 pb-2 pt-4">
+        Metodologi & Arsitektur
+      </h2>
+      <p>
+        Menggunakan kombinasi preprocessing augmentasi citra adaptif dan model deep neural network (YOLO & ResNet backbone) untuk mendeteksi serta mengklasifikasi genus mikroorganisme secara otomatis dengan akurasi tinggi.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

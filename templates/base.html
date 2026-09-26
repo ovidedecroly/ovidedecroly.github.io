@@ -18,10 +18,9 @@
   <meta name="author" content="{{ config.extra.author }}">
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
-  <meta name="theme-color" content="#111111">
+  <meta name="theme-color" content="#059669">
 
-  <link rel="canonical" href="{% if current_url is defined %}{{ current_url | safe }}{% else %}{{ config.base_url | safe }}{% endif %}">
-  <link rel="stylesheet" href="{{ get_url(path='css/style.css') | safe }}">
+  <link rel="stylesheet" href="/css/style.css">
 
   <meta property="og:title" content="{% if page is defined %}{{ page.title }} | {{ config.title }}{% elif section is defined %}{{ section.title }} | {{ config.title }}{% else %}{{ config.title }}{% endif %}">
   <meta property="og:description" content="{% if page is defined and page.description %}{{ page.description }}{% elif section is defined and section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}">
@@ -66,16 +65,19 @@
 </head>
 
 <body>
+  <div class="top-accent-bar"></div>
+  
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="/" aria-label="Ovide Academy Home">
+      <a class="brand-group" href="/" aria-label="Ovide Academy Home">
         <img
           src="/images/logo-ovide-academy.png"
           alt="Ovide Academy"
           class="brand-logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';"
+          onerror="this.style.display='none';"
         >
-        <span class="brand-fallback">Ovide Academy</span>
+        <span class="brand-title">Ovide<span>Academy</span></span>
+        <span class="brand-badge">Applied AI</span>
       </a>
 
       <nav class="main-nav" aria-label="Main navigation">
@@ -83,6 +85,10 @@
           <a href="{{ item.url | safe }}">{{ item.name }}</a>
         {% endfor %}
       </nav>
+
+      <div class="nav-actions">
+        <a class="btn small primary" href="/research/">Explore Lab</a>
+      </div>
     </div>
   </header>
 
@@ -91,17 +97,45 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p>
-        © {{ now() | date(format="%Y") }} Ovide Academy. Personal academic website of
-        Dr. Ovide Decroly Wisnu Ardhi.
-      </p>
-
-      <div class="footer-links">
-        <a href="https://github.com/ovidedecroly" target="_blank" rel="noopener">GitHub</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h4>Ovide<span>Academy</span></h4>
+        <p>Personal academic and research portal of Dr. Ovide Decroly Wisnu Ardhi, S.T., M.Eng. Dedicated to advancing Applied AI, Computer Vision, and Digital Learning.</p>
       </div>
+
+      <div class="footer-column">
+        <h5>Research & Lab</h5>
+        <ul class="footer-links-list">
+          <li><a href="/research/">Research Projects</a></li>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/blog/yolo-deteksi-objek/">YOLO & Computer Vision</a></li>
+          <li><a href="/research/plankton-visual-ai/">Plankton Visual AI</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h5>Teaching & Books</h5>
+        <ul class="footer-links-list">
+          <li><a href="/books/">All Published Books</a></li>
+          <li><a href="/teaching/">Lecture Modules</a></li>
+          <li><a href="/books/literasi-data-dan-teknologi-digital/">Literasi Data & Digital</a></li>
+          <li><a href="/books/image-with-deep-learning/">Deep Learning Book</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h5>Connect & Profile</h5>
+        <ul class="footer-links-list">
+          <li><a href="/about/">About Dr. Ovide</a></li>
+          <li><a href="https://github.com/ovidedecroly" target="_blank" rel="noopener">GitHub Profile ↗</a></li>
+          <li><a href="/blog/">Academic Blog</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom-bar">
+      <p>© {{ now() | date(format="%Y") }} <strong>Ovide Academy</strong> — Dr. Ovide Decroly Wisnu Ardhi. All rights reserved.</p>
+      <p style="font-family: var(--font-mono); font-size: 0.8rem;">Powered by Zola • Clean Flat Architecture</p>
     </div>
   </footer>
 </body>

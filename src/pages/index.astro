@@ -1,0 +1,478 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Featured Articles
+const articles = [
+  {
+    title: "Dakwah Digital dan Artificial Intelligence",
+    date: "09 Juni 2026",
+    category: "Dakwah Digital",
+    slug: "/blog/dakwah-digital-dan-ai",
+    desc: "Refleksi awal tentang pemanfaatan AI secara etis dalam dakwah digital dan penyebaran konten bermutu.",
+    tags: ["Dakwah", "AI", "Etika Digital"]
+  },
+  {
+    title: "YOLO untuk Deteksi Objek: Catatan Awal",
+    date: "08 Juni 2026",
+    category: "Computer Vision",
+    slug: "/blog/yolo-deteksi-objek",
+    desc: "Ringkasan praktis tentang arsitektur YOLO sebagai model deteksi objek satu tahap berkecepatan tinggi.",
+    tags: ["YOLO", "Object Detection", "Vision AI"]
+  },
+  {
+    title: "Pengantar Artificial Intelligence",
+    date: "07 Juni 2026",
+    category: "AI & ML",
+    slug: "/blog/pengantar-ai",
+    desc: "Catatan awal tentang konsep dasar Artificial Intelligence untuk mahasiswa dan pembelajar pemula.",
+    tags: ["AI", "Machine Learning", "Deep Learning"]
+  }
+];
+
+// Featured Books
+const books = [
+  {
+    title: "Literasi Data dan Teknologi Digital",
+    status: "Draft",
+    cover: "/images/book-literasi-data.svg",
+    slug: "/books/literasi-data-dan-teknologi-digital",
+    desc: "Buku pengantar literasi data, teknologi digital, dan pemikiran analitis modern untuk mahasiswa perguruan tinggi.",
+    pdf: "/pdf/buku-literasi-data.pdf"
+  },
+  {
+    title: "Image with Deep Learning",
+    status: "In Preparation",
+    cover: "/images/book-image-deep-learning.svg",
+    slug: "/books/image-with-deep-learning",
+    desc: "Modul komprehensif mengenai pemrosesan citra digital, computer vision, deep learning, dan deteksi objek tingkat lanjut.",
+    pdf: "/pdf/buku-image-deep-learning.pdf"
+  }
+];
+
+// Research Highlights
+const researchItems = [
+  {
+    title: "AI-Based Visual Analysis for Plankton Images",
+    date: "07 Juni 2026",
+    category: "Marine Vision AI",
+    slug: "/research/plankton-visual-ai",
+    desc: "Deteksi dan klasifikasi plankton otomatis pada citra mikroskopik menggunakan arsitektur deep learning canggih.",
+    tags: ["Plankton", "YOLO", "Microscopy"]
+  }
+];
+
+// Teaching Module
+const teachingItems = [
+  {
+    title: "Modul AI Pertemuan 1: Dasar Kecerdasan Buatan",
+    date: "07 Juni 2026",
+    category: "Materi Kuliah",
+    slug: "/teaching/modul-ai-pertemuan-1",
+    desc: "Slide, silabus, dan rangkuman materi pengantar Artificial Intelligence untuk perkuliahan semester awal.",
+    tags: ["AI", "Perkuliahan", "Modul"]
+  }
+];
+---
+
+<BaseLayout>
+  <!-- Hero Section (Neo-Flat Asymmetric Layout) -->
+  <section class="bg-gradient-to-b from-white via-emerald-50/30 to-slate-50 border-b border-slate-200 py-12 lg:py-18">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      
+      <!-- Left Column: Hero Text & Pitch -->
+      <div class="lg:col-span-7 flex flex-col justify-center">
+        
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white border border-emerald-200 rounded-full text-xs font-bold text-emerald-800 shadow-xs mb-5 w-fit">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Applied AI Researcher & Academic Portal</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-5">
+          Exploring <span class="text-emerald-600">Visual Intelligence</span>, Deep Learning, and Modern Education.
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-7 max-w-xl">
+          <strong>Ovide Academy</strong> adalah platform akademik pribadi <strong>Dr. Ovide Decroly Wisnu Ardhi, S.T., M.Eng.</strong> untuk berbagi catatan riset, buku teks, materi ajar, dan artikel penerapan Artificial Intelligence di dunia nyata.
+        </p>
+
+        <!-- CTA Row -->
+        <div class="flex flex-wrap gap-3 mb-8">
+          <a href="/research" class="flat-btn-primary">
+            <span>🔬 Eksplorasi Riset</span>
+          </a>
+          <a href="/books" class="flat-btn-secondary">
+            <span>📚 Buku & Modul</span>
+          </a>
+          <a href="/blog" class="flat-btn-outline">
+            <span>✍️ Baca Artikel</span>
+          </a>
+        </div>
+
+        <!-- Metrics Matrix Row -->
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200/80">
+          <div>
+            <div class="text-2xl font-extrabold font-mono text-emerald-700">4+</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Bidang Riset</div>
+          </div>
+          <div>
+            <div class="text-2xl font-extrabold font-mono text-emerald-700">YOLO</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Real-Time Vision</div>
+          </div>
+          <div>
+            <div class="text-2xl font-extrabold font-mono text-emerald-700">Open</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Akses Edukasi</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Interactive Profile Widget -->
+      <div class="lg:col-span-5">
+        <div class="bg-white border-2 border-slate-200 border-t-4 border-t-emerald-600 rounded-2xl p-6 shadow-sm flex flex-col justify-between h-full">
+          
+          <div>
+            <div class="flex items-center gap-4 pb-5 border-b border-slate-100 mb-5">
+              <div class="w-14 h-14 rounded-xl bg-emerald-100 border border-emerald-300 flex items-center justify-center font-mono font-extrabold text-xl text-emerald-800 shrink-0">
+                OD
+              </div>
+              <div>
+                <h3 class="font-extrabold text-base sm:text-lg text-slate-900 leading-tight">
+                  Dr. Ovide Decroly
+                </h3>
+                <p class="text-xs font-semibold text-emerald-700 mt-0.5">
+                  S.T., M.Eng. • Applied AI Researcher
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-5">
+              <h4 class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">
+                Spesialisasi & Fokus Riset
+              </h4>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-md text-xs font-bold">
+                  Computer Vision
+                </span>
+                <span class="px-2.5 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-md text-xs font-bold">
+                  YOLO Architecture
+                </span>
+                <span class="px-2.5 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-md text-xs font-bold">
+                  Deep Learning
+                </span>
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-md text-xs font-medium">
+                  Image Processing
+                </span>
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-md text-xs font-medium">
+                  Academic Writing
+                </span>
+                <span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded-md text-xs font-medium">
+                  Digital Education
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Research Focus Card -->
+          <div class="bg-emerald-50/80 border border-emerald-200 rounded-xl p-3.5 mt-2">
+            <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-800 flex items-center gap-1.5 mb-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+              <span>Riset Aktif Berjalan</span>
+            </div>
+            <p class="text-xs text-emerald-950 leading-relaxed font-medium">
+              Analisis visual berbasis AI dan klasifikasi plankton otomatis pada citra mikroskopik menggunakan deep learning.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Research Pillars Bento Grid -->
+  <section class="py-14 sm:py-18">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 mb-8">
+        <div>
+          <span class="flat-badge mb-2">Pilar Akademik</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            Bidang Kajian & Fokus Keilmuan
+          </h2>
+          <p class="text-sm text-slate-500 mt-1">
+            Kombinasi riset rekayasa kecerdasan buatan dan implikasinya pada dunia pendidikan & masyarakat.
+          </p>
+        </div>
+        <a href="/about" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-xs">
+          Profil Lengkap &rarr;
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        
+        <div class="flat-card p-6 flex flex-col justify-between border-t-4 border-t-emerald-600">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-xl text-emerald-700 mb-4">
+              👁️
+            </div>
+            <h3 class="font-extrabold text-base text-slate-900 mb-2">Computer Vision & YOLO</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Riset pendeteksian objek real-time, segmentasi citra, dan analisis visual ilmiah menggunakan arsitektur mutakhir.
+            </p>
+          </div>
+          <span class="text-[11px] font-mono font-bold text-emerald-700 uppercase">Vision AI • Detection</span>
+        </div>
+
+        <div class="flat-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-xl text-emerald-700 mb-4">
+              🧠
+            </div>
+            <h3 class="font-extrabold text-base text-slate-900 mb-2">Applied Machine Learning</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Penerapan algoritma machine learning praktis untuk sistem pendukung keputusan, klasifikasi data, dan edge AI.
+            </p>
+          </div>
+          <span class="text-[11px] font-mono font-bold text-emerald-700 uppercase">Deep Learning • Analytics</span>
+        </div>
+
+        <div class="flat-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-xl text-emerald-700 mb-4">
+              📝
+            </div>
+            <h3 class="font-extrabold text-base text-slate-900 mb-2">Academic Writing</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Panduan terstruktur penulisan artikel ilmiah, metodologi riset, visualisasi data, dan publikasi internasional.
+            </p>
+          </div>
+          <span class="text-[11px] font-mono font-bold text-emerald-700 uppercase">Publikasi • Metodologi</span>
+        </div>
+
+        <div class="flat-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-xl text-emerald-700 mb-4">
+              🎓
+            </div>
+            <h3 class="font-extrabold text-base text-slate-900 mb-2">Digital & Islamic Education</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Pengembangan literasi digital, etika pemanfaatan AI dalam dakwah, dan media pembelajaran interaktif.
+            </p>
+          </div>
+          <span class="text-[11px] font-mono font-bold text-emerald-700 uppercase">EdTech • Literasi</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Latest Articles Section -->
+  <section class="py-14 sm:py-18 bg-white border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 mb-8">
+        <div>
+          <span class="flat-badge mb-2">Catatan Ilmiah</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            Artikel & Insight Terbaru
+          </h2>
+          <p class="text-sm text-slate-500 mt-1">
+            Tutorial teknis, ringkasan konsep AI, dan refleksi pemikiran digital.
+          </p>
+        </div>
+        <a href="/blog" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-lg shadow-xs">
+          Semua Artikel &rarr;
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {articles.map((item) => (
+          <article class="flat-card p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center text-xs mb-3">
+                <span class="font-mono text-slate-400 font-semibold">{item.date}</span>
+                <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 font-bold rounded text-[11px] border border-emerald-200">
+                  {item.category}
+                </span>
+              </div>
+              <h3 class="font-extrabold text-base text-slate-900 mb-2.5 leading-snug">
+                <a href={item.slug} class="hover:text-emerald-600 transition-colors">
+                  {item.title}
+                </a>
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                {item.desc}
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
+              <div class="flex gap-1.5">
+                {item.tags.map(t => (
+                  <span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">
+                    #{t}
+                  </span>
+                ))}
+              </div>
+              <a href={item.slug} class="text-xs font-bold text-emerald-700 hover:text-emerald-800">
+                Baca &rarr;
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Books & Modules Showcase (Flat Bookshelf) -->
+  <section class="py-14 sm:py-18">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3 mb-8">
+        <div>
+          <span class="flat-badge mb-2">Buku & Modul Ajar</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            Karya Buku & Bahan Pembelajaran
+          </h2>
+          <p class="text-sm text-slate-500 mt-1">
+            Buku teks rujukan dan modul belajar mandiri yang disusun untuk mahasiswa & profesional.
+          </p>
+        </div>
+        <a href="/books" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-xs">
+          Semua Buku &rarr;
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {books.map((book) => (
+          <div class="flat-card p-5 grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+            
+            <div class="sm:col-span-4 bg-emerald-50/70 border border-emerald-200/80 rounded-lg p-3 flex items-center justify-center">
+              <img 
+                src={book.cover} 
+                alt={book.title} 
+                class="w-full max-h-38 object-contain rounded"
+              />
+            </div>
+
+            <div class="sm:col-span-8 flex flex-col justify-between h-full">
+              <div>
+                <span class="inline-block px-2 py-0.5 bg-emerald-100/70 text-emerald-900 border border-emerald-300 font-mono text-[10px] font-bold rounded uppercase mb-2">
+                  {book.status}
+                </span>
+                <h3 class="font-extrabold text-base text-slate-900 mb-2 leading-snug">
+                  <a href={book.slug} class="hover:text-emerald-600 transition-colors">
+                    {book.title}
+                  </a>
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  {book.desc}
+                </p>
+              </div>
+
+              <div class="flex gap-2">
+                <a href={book.slug} class="flat-btn-secondary !py-1 !px-3 !text-xs">
+                  Detail & Bab &rarr;
+                </a>
+                {book.pdf && (
+                  <a href={book.pdf} target="_blank" rel="noopener" class="flat-btn-primary !py-1 !px-3 !text-xs">
+                    📄 Unduh PDF
+                  </a>
+                )}
+              </div>
+            </div>
+
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Research & Teaching Row -->
+  <section class="py-14 sm:py-18 bg-white border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10">
+      
+      <!-- Left: Research Projects -->
+      <div>
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <span class="flat-badge mb-1.5">Laboratorium</span>
+            <h3 class="text-xl font-extrabold text-slate-900">Riset & Eksperimen</h3>
+          </div>
+          <a href="/research" class="text-xs font-bold text-emerald-700 hover:text-emerald-800">Semua Riset &rarr;</a>
+        </div>
+
+        <div class="space-y-4">
+          {researchItems.map(item => (
+            <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl hover:border-emerald-500 transition-colors">
+              <div class="flex justify-between items-center text-xs mb-2">
+                <span class="font-mono text-slate-400 font-semibold">{item.date}</span>
+                <span class="text-[10px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded">
+                  {item.category}
+                </span>
+              </div>
+              <h4 class="font-extrabold text-sm text-slate-900 mb-1">
+                <a href={item.slug} class="hover:text-emerald-600">{item.title}</a>
+              </h4>
+              <p class="text-xs text-slate-600 leading-relaxed mb-3">{item.desc}</p>
+              <a href={item.slug} class="text-xs font-bold text-emerald-700 hover:text-emerald-800">
+                Lihat Catatan Riset &rarr;
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right: Teaching & Lectures -->
+      <div>
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <span class="flat-badge mb-1.5">Materi Kuliah</span>
+            <h3 class="text-xl font-extrabold text-slate-900">Pengajaran & Modul</h3>
+          </div>
+          <a href="/teaching" class="text-xs font-bold text-emerald-700 hover:text-emerald-800">Semua Modul &rarr;</a>
+        </div>
+
+        <div class="space-y-4">
+          {teachingItems.map(item => (
+            <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl hover:border-emerald-500 transition-colors">
+              <div class="flex justify-between items-center text-xs mb-2">
+                <span class="font-mono text-slate-400 font-semibold">{item.date}</span>
+                <span class="text-[10px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded">
+                  {item.category}
+                </span>
+              </div>
+              <h4 class="font-extrabold text-sm text-slate-900 mb-1">
+                <a href={item.slug} class="hover:text-emerald-600">{item.title}</a>
+              </h4>
+              <p class="text-xs text-slate-600 leading-relaxed mb-3">{item.desc}</p>
+              <a href={item.slug} class="text-xs font-bold text-emerald-700 hover:text-emerald-800">
+                Akses Materi Kuliah &rarr;
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Academic Collaboration Callout -->
+  <section class="py-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-900 text-white rounded-2xl p-8 sm:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-md">
+        <div>
+          <h3 class="text-2xl font-extrabold mb-2">Tertarik Kolaborasi Riset atau Kuliah Tamu?</h3>
+          <p class="text-sm text-emerald-100 max-w-xl leading-relaxed">
+            Terbuka untuk kolaborasi riset bersama seputar computer vision & deep learning, narasumber seminar akademik, serta perancangan kurikulum kecerdasan buatan.
+          </p>
+        </div>
+        <a href="/about" class="bg-white text-emerald-950 font-bold text-sm px-5 py-3 rounded-xl hover:bg-emerald-50 shrink-0 shadow-xs transition-colors">
+          Profil Lengkap & Kontak ↗
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

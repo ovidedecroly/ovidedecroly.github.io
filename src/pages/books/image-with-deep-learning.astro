@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Image with Deep Learning | Ovide Academy">
+  <section class="bg-white border-b border-slate-200 py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <a href="/books" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 mb-4 inline-block">&larr; Kembali ke Daftar Buku</a>
+      <div class="flex items-center gap-2 mb-2">
+        <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-900 border border-emerald-300 font-mono text-[10px] font-bold rounded uppercase">In Preparation</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
+        Image with Deep Learning
+      </h1>
+      <p class="text-base text-slate-600 leading-relaxed">
+        A comprehensive book on image processing, deep learning, convolutional neural networks, and real-time object detection.
+      </p>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-10 pb-8 border-b border-slate-200">
+      <div class="md:col-span-4 bg-emerald-50/70 border border-emerald-200 rounded-2xl p-6 flex items-center justify-center">
+        <img 
+          src="/images/book-image-deep-learning.svg" 
+          alt="Cover Image with Deep Learning"
+          class="w-full max-h-64 object-contain rounded"
+        />
+      </div>
+
+      <div class="md:col-span-8 flex flex-col justify-between">
+        <div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Sinopsis & Rencana Materi</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            Buku ini dirancang untuk mahasiswa ilmu komputer dan peneliti rekayasa perangkat lunak yang ingin mendalami arsitektur neural networks untuk visi komputer, mulai dari CNN dasar hingga arsitektur YOLO mutakhir.
+          </p>
+        </div>
+
+        <div class="flex gap-3">
+          <a href="/pdf/buku-image-deep-learning.pdf" target="_blank" rel="noopener" class="flat-btn-primary">
+            📄 Unduh Pratinjau PDF
+          </a>
+          <a href="/books" class="flat-btn-outline">
+            Daftar Buku Lainnya
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose prose-slate max-w-none text-slate-700 leading-relaxed space-y-6">
+      <h2 class="text-xl font-extrabold text-slate-900 border-b border-slate-200 pb-2">
+        Topik yang Dibahas
+      </h2>
+      <ul class="space-y-2 list-disc pl-6 text-sm">
+        <li>Dasar Pemrosesan Citra Digital & Transformasi Matriks Piksel</li>
+        <li>Convolutional Neural Networks (CNN) dari Nol</li>
+        <li>Arsitektur Deteksi Objek Modern: R-CNN, SSD, dan YOLO Family</li>
+        <li>Segmentasi Semantik Citra Medis & Mikroskopik</li>
+        <li>Implementasi Praktis dengan PyTorch & Ultralytics</li>
+      </ul>
+    </div>
+  </article>
+</BaseLayout>

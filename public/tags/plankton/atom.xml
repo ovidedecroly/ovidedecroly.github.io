@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="id">
+    <title>Ovide Academy | Dr. Ovide Decroly Wisnu Ardhi - Plankton</title>
+    <subtitle>Ovide Academy is the personal academic website of Dr. Ovide Decroly Wisnu Ardhi, an Applied AI Researcher focusing on computer vision, deep learning, academic writing, and digital education.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://ovidedecroly.github.io/tags/plankton/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-06-07T00:00:00+00:00</updated>
+    <id>https://ovidedecroly.github.io/tags/plankton/atom.xml</id>
+    <entry xml:lang="id">
+        <title>AI-Based Visual Analysis for Plankton Images</title>
+        <published>2026-06-07T00:00:00+00:00</published>
+        <updated>2026-06-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io/research/plankton-visual-ai/"/>
+        <id>https://ovidedecroly.github.io/research/plankton-visual-ai/</id>
+        
+        <content type="html" xml:base="https://ovidedecroly.github.io/research/plankton-visual-ai/">&lt;p&gt;Riset ini berfokus pada penggunaan deep learning untuk menganalisis citra mikroskopik plankton. Pendekatan visual AI dapat membantu proses identifikasi spesies, dokumentasi ekologis, dan pengembangan sistem pendukung keputusan berbasis citra.&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>

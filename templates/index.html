@@ -1,102 +1,219 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="hero">
+<!-- Neo-Flat Hero Section -->
+<section class="hero-wrapper">
   <div class="container hero-grid">
-    <div>
-      <p class="eyebrow">Personal Academic Website</p>
+    <div class="hero-content">
+      <div class="status-indicator-pill">
+        <span class="pulse-dot"></span>
+        <span>Applied AI Researcher & Academic</span>
+      </div>
 
-      <h1 class="hero-title">
-        <span class="hero-brand">Ovide Academy</span>
+      <h1 class="hero-main-title">
+        Advancing <span class="gradient-text">Visual AI</span> & Intelligent Systems for Education and Society
       </h1>
 
-      <p class="hero-intro">{{ config.extra.intro }}</p>
+      <p class="hero-desc">
+        {{ config.extra.intro }}
+      </p>
 
-      <div class="hero-actions">
-        <a class="btn primary" href="/blog/">Read Articles</a>
-        <a class="btn" href="/books/">View Books</a>
+      <div class="hero-actions-row">
+        <a class="btn primary" href="/research/">Explore Research 🔬</a>
+        <a class="btn secondary" href="/books/">Published Books 📚</a>
+        <a class="btn outline" href="/blog/">Read Articles ✍️</a>
+      </div>
+
+      <div class="stats-matrix">
+        <div class="stat-item">
+          <h4>4+</h4>
+          <p>Key AI Domains</p>
+        </div>
+        <div class="stat-item">
+          <h4>YOLO</h4>
+          <p>Real-Time Vision</p>
+        </div>
+        <div class="stat-item">
+          <h4>Open</h4>
+          <p>Academic Sharing</p>
+        </div>
       </div>
     </div>
 
-    <div class="hero-card">
-      <h2>Focus Areas</h2>
-      <ul class="check-list">
-        <li>Artificial Intelligence</li>
-        <li>Computer Vision</li>
-        <li>Deep Learning</li>
-        <li>YOLO-based Object Detection</li>
-        <li>Academic Writing</li>
-        <li>Digital and Islamic Education</li>
-      </ul>
+    <div class="profile-card">
+      <div>
+        <div class="profile-header">
+          <div class="profile-avatar-box">OD</div>
+          <div class="profile-info">
+            <h3>Dr. Ovide Decroly</h3>
+            <p class="profile-role">S.T., M.Eng. • Applied AI Researcher</p>
+          </div>
+        </div>
+
+        <div class="profile-tags-section">
+          <h5>Core Research Specializations</h5>
+          <div class="tag-cloud-mini">
+            <span class="tag-chip active">Computer Vision</span>
+            <span class="tag-chip active">YOLO Detection</span>
+            <span class="tag-chip active">Deep Learning</span>
+            <span class="tag-chip">Image Segmentation</span>
+            <span class="tag-chip">Academic Writing</span>
+            <span class="tag-chip">Digital Education</span>
+            <span class="tag-chip">Data Literacy</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="active-research-box">
+        <h6>🔬 Active Research Focus</h6>
+        <p>Microscopic plankton classification & real-time object detection models for scientific visual intelligence.</p>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- Research Pillars Bento Grid -->
 <section class="section">
-  <div class="container section-head">
-    <div>
-      <p class="eyebrow">Blog</p>
-      <h2>Latest Articles</h2>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="eyebrow">Academic Pillars</span>
+        <h2>Focus & Research Domains</h2>
+        <p class="section-desc">Interdisciplinary investigation bridging machine learning, applied engineering, and educational impact.</p>
+      </div>
+      <a class="section-link" href="/about/">Academic Profile &rarr;</a>
     </div>
-    <a href="/blog/">All articles &rarr;</a>
-  </div>
 
-  <div class="container card-grid">
-    {% set blog = get_section(path="blog/_index.md") %}
-    {% for page in blog.pages | slice(end=3) %}
-      {% include "partials/article-card.html" %}
-    {% endfor %}
+    <div class="bento-grid">
+      <div class="bento-card highlight">
+        <div class="bento-icon">👁️</div>
+        <h3>Computer Vision & YOLO</h3>
+        <p>Specializing in real-time object detection architectures, image segmentation, and microscopic image recognition using deep learning.</p>
+        <span class="bento-meta">Vision AI • Detection</span>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon">🧠</div>
+        <h3>Applied Machine Learning</h3>
+        <p>Developing practical, deployable AI algorithms for decision support systems, data analytics, and real-world classification tasks.</p>
+        <span class="bento-meta">Deep Learning • Analytics</span>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon">📝</div>
+        <h3>Academic Writing</h3>
+        <p>Guidance on structured scholarly research, international journal publication standards, data synthesis, and technical communication.</p>
+        <span class="bento-meta">Publishing • Methodology</span>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon">🎓</div>
+        <h3>Digital & Islamic Education</h3>
+        <p>Integrating AI literacy, ethical digital technologies, and interactive learning media into modern academic curricula.</p>
+        <span class="bento-meta">EdTech • Ethics</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section muted">
-  <div class="container section-head">
-    <div>
-      <p class="eyebrow">Books</p>
-      <h2>Books</h2>
+<!-- Latest Articles Section -->
+<section class="section alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="eyebrow">Scholarly Notes</span>
+        <h2>Latest Articles & Insights</h2>
+        <p class="section-desc">Technical tutorials, reflections, and deep dives on artificial intelligence and pedagogy.</p>
+      </div>
+      <a class="section-link" href="/blog/">All Articles &rarr;</a>
     </div>
-    <a href="/books/">All books &rarr;</a>
-  </div>
 
-  <div class="container book-grid">
-    {% set books = get_section(path="books/_index.md") %}
-    {% for page in books.pages | slice(end=3) %}
-      {% include "partials/book-card.html" %}
-    {% endfor %}
+    <div class="cards-grid">
+      {% set blog = get_section(path="blog/_index.md") %}
+      {% for page in blog.pages %}
+        {% if loop.index <= 3 %}
+          {% include "partials/article-card.html" %}
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 
+<!-- Books & Modules Showcase -->
 <section class="section">
-  <div class="container section-head">
-    <div>
-      <p class="eyebrow">Research</p>
-      <h2>Research Highlights</h2>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="eyebrow">Publications</span>
+        <h2>Books & Course Modules</h2>
+        <p class="section-desc">Comprehensive reference materials, textbooks, and guided learning resources.</p>
+      </div>
+      <a class="section-link" href="/books/">All Books &rarr;</a>
     </div>
-    <a href="/research/">All research &rarr;</a>
-  </div>
 
-  <div class="container card-grid">
-    {% set research = get_section(path="research/_index.md") %}
-    {% for page in research.pages | slice(end=3) %}
-      {% include "partials/article-card.html" %}
-    {% endfor %}
+    <div class="books-grid">
+      {% set books = get_section(path="books/_index.md") %}
+      {% for page in books.pages %}
+        {% if loop.index <= 2 %}
+          {% include "partials/book-card.html" %}
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 
-<section class="section muted">
-  <div class="container section-head">
-    <div>
-      <p class="eyebrow">Teaching</p>
-      <h2>Teaching Materials</h2>
+<!-- Research Projects Section -->
+<section class="section alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="eyebrow">Laboratory</span>
+        <h2>Research Highlights</h2>
+        <p class="section-desc">Experimental investigations and case studies in computer vision and artificial intelligence.</p>
+      </div>
+      <a class="section-link" href="/research/">All Projects &rarr;</a>
     </div>
-    <a href="/teaching/">All materials &rarr;</a>
-  </div>
 
-  <div class="container card-grid">
-    {% set teaching = get_section(path="teaching/_index.md") %}
-    {% for page in teaching.pages | slice(end=3) %}
-      {% include "partials/article-card.html" %}
-    {% endfor %}
+    <div class="cards-grid">
+      {% set research = get_section(path="research/_index.md") %}
+      {% for page in research.pages %}
+        {% if loop.index <= 3 %}
+          {% include "partials/article-card.html" %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Teaching Materials Section -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="eyebrow">Curriculum</span>
+        <h2>Teaching & Lecture Notes</h2>
+        <p class="section-desc">Curated slide decks, workshop guides, and student modules for AI courses.</p>
+      </div>
+      <a class="section-link" href="/teaching/">All Materials &rarr;</a>
+    </div>
+
+    <div class="cards-grid">
+      {% set teaching = get_section(path="teaching/_index.md") %}
+      {% for page in teaching.pages %}
+        {% if loop.index <= 3 %}
+          {% include "partials/article-card.html" %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Academic Collaboration Banner -->
+    <div class="academic-callout">
+      <div>
+        <h3>Interested in Academic or Research Collaboration?</h3>
+        <p>Open for joint research on computer vision, guest lecturing, keynote sessions, and applied AI curriculum development.</p>
+      </div>
+      <a class="btn white" href="/about/">View Full Profile & Bio ↗</a>
+    </div>
   </div>
 </section>
 {% endblock content %}

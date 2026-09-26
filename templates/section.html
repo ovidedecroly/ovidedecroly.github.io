@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="page-hero">
+<section class="page-banner">
   <div class="container">
-    <p class="eyebrow">{{ config.title }}</p>
+    <span class="eyebrow">{{ config.title }}</span>
     <h1>{{ section.title }}</h1>
-    {% if section.description %}<p class="lead">{{ section.description }}</p>{% endif %}
+    {% if section.description %}<p class="page-lead">{{ section.description }}</p>{% endif %}
   </div>
 </section>
 
 <section class="section">
-  <div class="container card-grid">
+  <div class="container cards-grid">
     {% for page in section.pages %}
       {% include "partials/article-card.html" %}
     {% endfor %}

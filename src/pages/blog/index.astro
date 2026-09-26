@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = [
+  {
+    title: "Dakwah Digital dan Artificial Intelligence",
+    date: "09 Juni 2026",
+    category: "Dakwah Digital",
+    slug: "/blog/dakwah-digital-dan-ai",
+    desc: "Refleksi awal tentang pemanfaatan AI secara etis dalam dakwah digital dan penyebaran konten bermutu.",
+    tags: ["Dakwah", "AI", "Etika Digital"]
+  },
+  {
+    title: "YOLO untuk Deteksi Objek: Catatan Awal",
+    date: "08 Juni 2026",
+    category: "Computer Vision",
+    slug: "/blog/yolo-deteksi-objek",
+    desc: "Ringkasan praktis tentang arsitektur YOLO sebagai model deteksi objek satu tahap berkecepatan tinggi.",
+    tags: ["YOLO", "Object Detection", "Vision AI"]
+  },
+  {
+    title: "Pengantar Artificial Intelligence",
+    date: "07 Juni 2026",
+    category: "AI & ML",
+    slug: "/blog/pengantar-ai",
+    desc: "Catatan awal tentang konsep dasar Artificial Intelligence untuk mahasiswa dan pembelajar pemula.",
+    tags: ["AI", "Machine Learning", "Deep Learning"]
+  },
+  {
+    title: "Ovide Academy: Gagasan dan Arah Pengembangan",
+    date: "01 Juni 2026",
+    category: "Akademik",
+    slug: "/blog/ovide-academy",
+    desc: "Latar belakang inisiasi Ovide Academy sebagai pusat catatan riset, buku, dan media belajar AI.",
+    tags: ["Ovide Academy", "Visi", "Pendidikan"]
+  }
+];
+---
+
+<BaseLayout title="Blog | Ovide Academy">
+  <section class="bg-white border-b border-slate-200 py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <span class="flat-badge mb-2">Artikel & Catatan</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
+        Academic Blog & Insights
+      </h1>
+      <p class="text-base text-slate-600">
+        Rangkuman pemikiran, tutorial teknis computer vision, rekayasa deep learning, dan digitalisasi pendidikan.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {posts.map((post) => (
+        <article class="flat-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center text-xs mb-3">
+              <span class="font-mono text-slate-400 font-semibold">{post.date}</span>
+              <span class="px-2.5 py-0.5 bg-emerald-50 text-emerald-800 font-bold rounded text-[11px] border border-emerald-200">
+                {post.category}
+              </span>
+            </div>
+            <h3 class="font-extrabold text-lg text-slate-900 mb-2 leading-snug">
+              <a href={post.slug} class="hover:text-emerald-600 transition-colors">
+                {post.title}
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              {post.desc}
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
+            <div class="flex gap-1.5">
+              {post.tags.map(t => (
+                <span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">
+                  #{t}
+                </span>
+              ))}
+            </div>
+            <a href={post.slug} class="text-xs font-bold text-emerald-700 hover:text-emerald-800">
+              Baca Artikel &rarr;
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

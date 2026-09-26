@@ -1,36 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="page-hero">
+<section class="page-banner">
   <div class="container">
-    <p class="eyebrow">Books</p>
-    <h1>Books</h1>
+    <span class="eyebrow">Publications & Media</span>
+    <h1>Books & Learning Modules</h1>
 
     {% if section.description %}
-      <p class="lead">{{ section.description }}</p>
+      <p class="page-lead">{{ section.description }}</p>
     {% else %}
-      <p class="lead">
-        Books, modules, and learning resources developed as part of Ovide Academy.
+      <p class="page-lead">
+        Comprehensive academic textbooks, teaching modules, and digital learning guides developed by Dr. Ovide Decroly Wisnu Ardhi.
       </p>
     {% endif %}
   </div>
 </section>
 
-<section class="section muted">
+<section class="section">
   <div class="container">
     {% if section.pages | length > 0 %}
-      <div class="book-grid">
+      <div class="books-grid">
         {% for page in section.pages %}
           {% include "partials/book-card.html" %}
         {% endfor %}
       </div>
     {% else %}
-      <div class="card">
+      <div class="article-card">
         <h3>No books available yet</h3>
-        <p>
-          Book entries will appear here after they are added to the
-          <code>content/books/</code> folder.
-        </p>
+        <p>Book entries will appear here after they are added to the <code>content/books/</code> directory.</p>
       </div>
     {% endif %}
   </div>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const researchProjects = [
+  {
+    title: "AI-Based Visual Analysis for Plankton Images",
+    date: "07 Juni 2026",
+    category: "Marine Vision AI",
+    slug: "/research/plankton-visual-ai",
+    desc: "Deteksi dan klasifikasi plankton otomatis pada citra mikroskopik menggunakan deep learning dan arsitektur YOLO mutakhir.",
+    tags: ["Plankton", "YOLO", "Microscopy", "Deep Learning"]
+  }
+];
+---
+
+<BaseLayout title="Research Projects | Ovide Academy">
+  <section class="bg-white border-b border-slate-200 py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <span class="flat-badge mb-2">Laboratorium & Eksperimen</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
+        Research Projects & Highlights
+      </h1>
+      <p class="text-base text-slate-600">
+        Eksplorasi penelitian terapan di bidang Computer Vision, YOLO, dan kecerdasan visual ilmiah.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {researchProjects.map((item) => (
+        <article class="flat-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center text-xs mb-3">
+              <span class="font-mono text-slate-400 font-semibold">{item.date}</span>
+              <span class="px-2.5 py-0.5 bg-emerald-50 text-emerald-800 font-bold rounded text-[11px] border border-emerald-200">
+                {item.category}
+              </span>
+            </div>
+            <h3 class="font-extrabold text-lg text-slate-900 mb-2 leading-snug">
+              <a href={item.slug} class="hover:text-emerald-600 transition-colors">
+                {item.title}
+              </a>
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              {item.desc}
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
+            <div class="flex gap-1.5 flex-wrap">
+              {item.tags.map(t => (
+                <span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">
+                  #{t}
+                </span>
+              ))}
+            </div>
+            <a href={item.slug} class="text-xs font-bold text-emerald-700 hover:text-emerald-800">
+              Lihat Riset &rarr;
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

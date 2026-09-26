@@ -1,7 +1,23 @@
 {% extends "base.html" %}
+
 {% block content %}
-<section class="page-hero"><div class="container"><p class="eyebrow">Taxonomy</p><h1>Tags</h1></div></section>
-<section class="section"><div class="container tag-cloud">
-{% for term in terms %}<a href="{{ term.permalink }}">{{ term.name }} <span>{{ term.pages | length }}</span></a>{% endfor %}
-</div></section>
+<section class="page-banner">
+  <div class="container">
+    <span class="eyebrow">Taxonomy Index</span>
+    <h1>Explore by Tags</h1>
+    <p class="page-lead">Browse articles, research notes, and learning resources categorized by technical topic.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+      {% for term in terms %}
+        <a class="btn outline" href="{{ term.permalink }}" style="border-radius: var(--radius-full); font-weight: 700;">
+          #{{ term.name }} <span style="background: var(--green-50); color: var(--green-700); padding: 2px 8px; border-radius: var(--radius-full); font-size: 0.75rem; margin-left: 6px; border: 1px solid var(--green-200);">{{ term.pages | length }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 {% endblock content %}

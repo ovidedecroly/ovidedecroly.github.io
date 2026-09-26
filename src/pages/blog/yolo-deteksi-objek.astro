@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="YOLO untuk Deteksi Objek: Catatan Awal | Ovide Academy">
+  <section class="bg-white border-b border-slate-200 py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <a href="/blog" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 mb-4 inline-block">&larr; Kembali ke Daftar Artikel</a>
+      <div class="flex items-center gap-2 mb-2">
+        <span class="font-mono text-xs text-slate-400 font-semibold">08 Juni 2026</span>
+        <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded text-[11px] font-bold">Computer Vision</span>
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-3">
+        YOLO untuk Deteksi Objek: Catatan Awal
+      </h1>
+      <p class="text-sm text-slate-600 leading-relaxed">
+        Ringkasan praktis tentang YOLO sebagai model deteksi objek satu tahap.
+      </p>
+      <div class="flex gap-1.5 mt-4">
+        <span class="text-[11px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-200">#YOLO</span>
+        <span class="text-[11px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-200">#Object Detection</span>
+        <span class="text-[11px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-200">#Computer Vision</span>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <div class="space-y-6 text-base text-slate-700 leading-relaxed">
+      <p>
+        <strong>YOLO (You Only Look Once)</strong> adalah keluarga model deteksi objek yang banyak digunakan karena pendekatannya relatif cepat dan praktis. Model ini memprediksi lokasi objek (*bounding box*) dan kelas objek secara simultan dalam satu tahap proses inferensi.
+      </p>
+
+      <h2 class="text-xl font-extrabold text-slate-900 border-b border-slate-200 pb-2 pt-4">
+        Kapan YOLO Cocok Digunakan?
+      </h2>
+      <p>
+        YOLO sangat cocok untuk aplikasi yang membutuhkan kecepatan tinggi dan efisiensi komputasi, seperti:
+      </p>
+      <ul class="space-y-2 list-disc pl-6 text-sm">
+        <li>Inspeksi visual otomatis dan kendali mutu di industri</li>
+        <li>Deteksi objek biologis dan spesimen mikroskopik</li>
+        <li>Pemantauan lingkungan dan satwa liar</li>
+        <li>Sistem keamanan dan pengawasan real-time</li>
+        <li>Prototipe computer vision berbasis web dan perangkat *edge* (Raspberry Pi / Jetson)</li>
+      </ul>
+    </div>
+  </article>
+</BaseLayout>

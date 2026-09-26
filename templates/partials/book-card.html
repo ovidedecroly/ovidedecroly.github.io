@@ -1,11 +1,15 @@
 <article class="book-card">
-  {% if page.extra.cover %}
-    <img class="book-cover" src="{{ page.extra.cover }}" alt="{{ page.title }}">
-  {% endif %}
+  <div class="book-cover-wrap">
+    {% if page.extra.cover %}
+      <img class="book-cover-img" src="{{ page.extra.cover }}" alt="Cover for {{ page.title }}">
+    {% else %}
+      <div style="font-size: 2.5rem; color: var(--green-600);">📖</div>
+    {% endif %}
+  </div>
 
-  <div class="book-card-body">
+  <div class="book-info-wrap">
     {% if page.extra.status %}
-      <p class="status">{{ page.extra.status }}</p>
+      <span class="book-status-tag">{{ page.extra.status }}</span>
     {% endif %}
 
     <h3>
@@ -16,11 +20,11 @@
       <p>{{ page.description }}</p>
     {% endif %}
 
-    <div class="book-actions">
-      <a class="btn small" href="{{ page.permalink | safe }}">Details</a>
+    <div class="book-card-actions">
+      <a class="btn small secondary" href="{{ page.permalink | safe }}">Details &rarr;</a>
 
       {% if page.extra.pdf %}
-        <a class="btn small primary" href="{{ page.extra.pdf }}" target="_blank" rel="noopener">Download PDF</a>
+        <a class="btn small primary" href="{{ page.extra.pdf }}" target="_blank" rel="noopener">📄 Download PDF</a>
       {% endif %}
     </div>
   </div>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="id">
+    <title>Ovide Academy | Dr. Ovide Decroly Wisnu Ardhi - Artificial Intelligence</title>
+    <subtitle>Ovide Academy is the personal academic website of Dr. Ovide Decroly Wisnu Ardhi, an Applied AI Researcher focusing on computer vision, deep learning, academic writing, and digital education.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://ovidedecroly.github.io/categories/artificial-intelligence/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-06-07T00:00:00+00:00</updated>
+    <id>https://ovidedecroly.github.io/categories/artificial-intelligence/atom.xml</id>
+    <entry xml:lang="id">
+        <title>Pengantar Artificial Intelligence</title>
+        <published>2026-06-07T00:00:00+00:00</published>
+        <updated>2026-06-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io/blog/pengantar-ai/"/>
+        <id>https://ovidedecroly.github.io/blog/pengantar-ai/</id>
+        
+        <content type="html" xml:base="https://ovidedecroly.github.io/blog/pengantar-ai/">&lt;p&gt;Artificial Intelligence adalah bidang ilmu yang mempelajari bagaimana komputer dapat melakukan tugas yang biasanya membutuhkan kecerdasan manusia. Dalam praktiknya, AI tidak hanya membahas model prediksi, tetapi juga bagaimana sistem dapat mengenali pola, mengambil keputusan, dan membantu manusia menyelesaikan masalah.&lt;/p&gt;
+&lt;h2 id=&quot;mengapa-ai-penting&quot;&gt;Mengapa AI penting?&lt;a class=&quot;zola-anchor&quot; href=&quot;#mengapa-ai-penting&quot; aria-label=&quot;Anchor link for: mengapa-ai-penting&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;AI sekarang digunakan dalam pendidikan, kesehatan, industri, riset ilmiah, computer vision, natural language processing, sistem rekomendasi, dan sistem pendukung keputusan.&lt;/p&gt;
+&lt;h2 id=&quot;catatan-untuk-mahasiswa&quot;&gt;Catatan untuk Mahasiswa&lt;a class=&quot;zola-anchor&quot; href=&quot;#catatan-untuk-mahasiswa&quot; aria-label=&quot;Anchor link for: catatan-untuk-mahasiswa&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Belajar AI sebaiknya dimulai dari pemahaman data, logika pemodelan, evaluasi model, dan etika penggunaan teknologi. Setelah itu, mahasiswa dapat masuk ke machine learning, deep learning, dan implementasi sistem berbasis AI.&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>

@@ -1,28 +1,44 @@
 {% extends "base.html" %}
 
 {% block content %}
-<article class="article container narrow">
+<section class="page-banner">
+  <div class="container narrow">
+    <div style="margin-bottom: 12px;">
+      <a class="read-link" href="/books/">&larr; Back to all books</a>
+    </div>
+    <span class="eyebrow">Book Profile</span>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="page-lead">{{ page.description }}</p>{% endif %}
+  </div>
+</section>
+
+<article class="article-container container narrow">
   {% set cover = page.extra.cover | default(value="") %}
   {% set pdf = page.extra.pdf | default(value="") %}
   {% set status = page.extra.status | default(value="") %}
 
-  <div class="book-detail">
+  <div class="book-detail-wrapper">
     {% if cover %}
-      <img class="book-cover-large" src="{{ cover }}" alt="Cover {{ page.title }}">
+      <img class="book-detail-cover" src="{{ cover }}" alt="Cover for {{ page.title }}">
+    {% else %}
+      <div class="book-detail-cover" style="padding: 40px; text-align: center; font-size: 3rem;">📖</div>
     {% endif %}
+
     <div>
-      <p class="eyebrow">Buku Saya</p>
-      <h1>{{ page.title }}</h1>
-      {% if status %}<p class="status">{{ status }}</p>{% endif %}
-      {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
-      <div class="hero-actions">
-        {% if pdf %}<a class="btn primary" href="{{ pdf }}" target="_blank" rel="noopener">Download PDF</a>{% endif %}
-        <a class="btn" href="/books/">Kembali ke daftar buku</a>
+      {% if status %}<span class="book-status-tag">{{ status }}</span>{% endif %}
+      <h3 style="margin: 8px 0 12px; font-size: 1.4rem;">Overview & Access</h3>
+      <p style="color: var(--text-body); margin-bottom: 20px;">This publication is authored by Dr. Ovide Decroly Wisnu Ardhi as part of the academic curriculum and research sharing at Ovide Academy.</p>
+
+      <div class="hero-actions-row">
+        {% if pdf %}
+          <a class="btn primary" href="{{ pdf }}" target="_blank" rel="noopener">📄 Download Free PDF</a>
+        {% endif %}
+        <a class="btn outline" href="/books/">View Other Books</a>
       </div>
     </div>
   </div>
 
-  <div class="content">
+  <div class="article-content">
     {{ page.content | safe }}
   </div>
 </article>

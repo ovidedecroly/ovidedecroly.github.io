@@ -1,5 +1,13 @@
-/public
+# Build outputs
+/dist
+/.astro
+/public/livereload.js
 /.sass-cache
 /.zola
+
+# Dependencies
+/node_modules
+
+# OS files
 .DS_Store
 Thumbs.db

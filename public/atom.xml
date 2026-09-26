@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="id">
+    <title>Ovide Academy | Dr. Ovide Decroly Wisnu Ardhi</title>
+    <subtitle>Ovide Academy is the personal academic website of Dr. Ovide Decroly Wisnu Ardhi, an Applied AI Researcher focusing on computer vision, deep learning, academic writing, and digital education.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://ovidedecroly.github.io/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-06-09T00:00:00+00:00</updated>
+    <id>https://ovidedecroly.github.io/atom.xml</id>
+    <entry xml:lang="id">
+        <title>Dakwah Digital dan Artificial Intelligence</title>
+        <published>2026-06-09T00:00:00+00:00</published>
+        <updated>2026-06-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io/blog/dakwah-digital-dan-ai/"/>
+        <id>https://ovidedecroly.github.io/blog/dakwah-digital-dan-ai/</id>
+        
+        <content type="html" xml:base="https://ovidedecroly.github.io/blog/dakwah-digital-dan-ai/">&lt;p&gt;Dakwah digital memerlukan pemahaman teknologi, komunikasi, adab, dan tanggung jawab ilmiah. AI dapat membantu penyusunan materi, pencarian referensi, pengelolaan konten, dan analisis kebutuhan audiens, tetapi tetap harus digunakan secara hati-hati.&lt;/p&gt;
+&lt;p&gt;Penggunaan AI dalam dakwah tidak boleh menggantikan kewajiban tabayyun, validasi dalil, dan tanggung jawab penyampai ilmu.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="id">
+        <title>YOLO untuk Deteksi Objek: Catatan Awal</title>
+        <published>2026-06-08T00:00:00+00:00</published>
+        <updated>2026-06-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io/blog/yolo-deteksi-objek/"/>
+        <id>https://ovidedecroly.github.io/blog/yolo-deteksi-objek/</id>
+        
+        <content type="html" xml:base="https://ovidedecroly.github.io/blog/yolo-deteksi-objek/">&lt;p&gt;YOLO adalah keluarga model deteksi objek yang banyak digunakan karena pendekatannya relatif cepat dan praktis. Model ini memprediksi lokasi objek dan kelas objek dalam satu proses inferensi.&lt;/p&gt;
+&lt;h2 id=&quot;kapan-yolo-cocok-digunakan&quot;&gt;Kapan YOLO cocok digunakan?&lt;a class=&quot;zola-anchor&quot; href=&quot;#kapan-yolo-cocok-digunakan&quot; aria-label=&quot;Anchor link for: kapan-yolo-cocok-digunakan&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;YOLO cocok untuk aplikasi yang membutuhkan deteksi cepat, seperti inspeksi visual, deteksi objek biologis, pemantauan lingkungan, sistem keamanan, dan prototipe computer vision berbasis web.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="id">
+        <title>What is Ovide Academy?</title>
+        <published>2026-06-07T00:00:00+00:00</published>
+        <updated>2026-06-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io/blog/ovide-academy/"/>
+        <id>https://ovidedecroly.github.io/blog/ovide-academy/</id>
+        
+        <content type="html" xml:base="https://ovidedecroly.github.io/blog/ovide-academy/">&lt;h1 id=&quot;what-is-ovide-academy&quot;&gt;What is Ovide Academy?&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-is-ovide-academy&quot; aria-label=&quot;Anchor link for: what-is-ovide-academy&quot;&gt;🔗&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Ovide Academy&lt;/strong&gt; is the personal academic website of &lt;strong&gt;Dr. Ovide Decroly Wisnu Ardhi&lt;/strong&gt;. This website is developed as a space for sharing research notes, teaching materials, blog articles, books, and applied AI ideas.&lt;/p&gt;
+&lt;p&gt;The main focus of Ovide Academy includes applied artificial intelligence, computer vision, deep learning, academic writing, and digital education.&lt;/p&gt;
+&lt;h2 id=&quot;why-ovide-academy&quot;&gt;Why Ovide Academy?&lt;a class=&quot;zola-anchor&quot; href=&quot;#why-ovide-academy&quot; aria-label=&quot;Anchor link for: why-ovide-academy&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Ovide Academy is designed to become a personal knowledge hub. It connects academic research, teaching materials, and practical AI discussions in one website.&lt;/p&gt;
+&lt;p&gt;The website is especially focused on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Applied Artificial Intelligence&lt;/li&gt;
+&lt;li&gt;Computer Vision&lt;/li&gt;
+&lt;li&gt;Deep Learning&lt;/li&gt;
+&lt;li&gt;Object Detection&lt;/li&gt;
+&lt;li&gt;YOLO-based Detection&lt;/li&gt;
+&lt;li&gt;Academic Writing&lt;/li&gt;
+&lt;li&gt;Digital Education&lt;/li&gt;
+&lt;li&gt;Books and Learning Materials&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;about-dr-ovide-decroly-wisnu-ardhi&quot;&gt;About Dr. Ovide Decroly Wisnu Ardhi&lt;a class=&quot;zola-anchor&quot; href=&quot;#about-dr-ovide-decroly-wisnu-ardhi&quot; aria-label=&quot;Anchor link for: about-dr-ovide-decroly-wisnu-ardhi&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Dr. Ovide Decroly Wisnu Ardhi is an Applied AI Researcher with interests in computer vision, deep learning, visual intelligence systems, academic writing, and digital education.&lt;/p&gt;
+&lt;p&gt;Through Ovide Academy, he shares academic notes, learning resources, and research-based ideas for students, researchers, educators, and general readers interested in applied AI.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="id">
+        <title>Pengantar Artificial Intelligence</title>
+        <published>2026-06-07T00:00:00+00:00</published>
+        <updated>2026-06-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io/blog/pengantar-ai/"/>
+        <id>https://ovidedecroly.github.io/blog/pengantar-ai/</id>
+        
+        <content type="html" xml:base="https://ovidedecroly.github.io/blog/pengantar-ai/">&lt;p&gt;Artificial Intelligence adalah bidang ilmu yang mempelajari bagaimana komputer dapat melakukan tugas yang biasanya membutuhkan kecerdasan manusia. Dalam praktiknya, AI tidak hanya membahas model prediksi, tetapi juga bagaimana sistem dapat mengenali pola, mengambil keputusan, dan membantu manusia menyelesaikan masalah.&lt;/p&gt;
+&lt;h2 id=&quot;mengapa-ai-penting&quot;&gt;Mengapa AI penting?&lt;a class=&quot;zola-anchor&quot; href=&quot;#mengapa-ai-penting&quot; aria-label=&quot;Anchor link for: mengapa-ai-penting&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;AI sekarang digunakan dalam pendidikan, kesehatan, industri, riset ilmiah, computer vision, natural language processing, sistem rekomendasi, dan sistem pendukung keputusan.&lt;/p&gt;
+&lt;h2 id=&quot;catatan-untuk-mahasiswa&quot;&gt;Catatan untuk Mahasiswa&lt;a class=&quot;zola-anchor&quot; href=&quot;#catatan-untuk-mahasiswa&quot; aria-label=&quot;Anchor link for: catatan-untuk-mahasiswa&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Belajar AI sebaiknya dimulai dari pemahaman data, logika pemodelan, evaluasi model, dan etika penggunaan teknologi. Setelah itu, mahasiswa dapat masuk ke machine learning, deep learning, dan implementasi sistem berbasis AI.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="id">
+        <title>Image with Deep Learning</title>
+        <published>2026-06-07T00:00:00+00:00</published>
+        <updated>2026-06-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io/books/image-with-deep-learning/"/>
+        <id>https://ovidedecroly.github.io/books/image-with-deep-learning/</id>
+        
+        <content type="html" xml:base="https://ovidedecroly.github.io/books/image-with-deep-learning/">&lt;h1 id=&quot;image-with-deep-learning&quot;&gt;Image with Deep Learning&lt;/h1&gt;
+&lt;p&gt;This book introduces image processing, deep learning, convolutional neural networks, and object detection.&lt;/p&gt;
+&lt;p&gt;It is designed as a learning resource for students, researchers, and early-stage practitioners who want to understand how deep learning can be applied to image-based problems.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="id">
+        <title>Literasi Data dan Teknologi Digital</title>
+        <published>2026-06-07T00:00:00+00:00</published>
+        <updated>2026-06-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io/books/literasi-data-dan-teknologi-digital/"/>
+        <id>https://ovidedecroly.github.io/books/literasi-data-dan-teknologi-digital/</id>
+        
+        <content type="html" xml:base="https://ovidedecroly.github.io/books/literasi-data-dan-teknologi-digital/">&lt;h1 id=&quot;literasi-data-dan-teknologi-digital&quot;&gt;Literasi Data dan Teknologi Digital&lt;/h1&gt;
+&lt;p&gt;This book introduces data literacy and digital technology for students.&lt;/p&gt;
+&lt;p&gt;It discusses basic concepts of data, information, digital technology, artificial intelligence, digital security, and the role of data literacy in academic and professional contexts.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="id">
+        <title>Selected Publication Example</title>
+        <published>2026-06-07T00:00:00+00:00</published>
+        <updated>2026-06-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io/publications/sample-publication/"/>
+        <id>https://ovidedecroly.github.io/publications/sample-publication/</id>
+        
+        <content type="html" xml:base="https://ovidedecroly.github.io/publications/sample-publication/">&lt;p&gt;Gunakan halaman ini sebagai contoh untuk menampilkan publikasi ilmiah, preprint, artikel jurnal, conference paper, atau manuscript yang sedang dikembangkan.&lt;/p&gt;
+&lt;p&gt;Format yang disarankan:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Authors&lt;/li&gt;
+&lt;li&gt;Year&lt;/li&gt;
+&lt;li&gt;Title&lt;/li&gt;
+&lt;li&gt;Journal/Conference&lt;/li&gt;
+&lt;li&gt;DOI/URL&lt;/li&gt;
+&lt;li&gt;Status&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="id">
+        <title>AI-Based Visual Analysis for Plankton Images</title>
+        <published>2026-06-07T00:00:00+00:00</published>
+        <updated>2026-06-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io/research/plankton-visual-ai/"/>
+        <id>https://ovidedecroly.github.io/research/plankton-visual-ai/</id>
+        
+        <content type="html" xml:base="https://ovidedecroly.github.io/research/plankton-visual-ai/">&lt;p&gt;Riset ini berfokus pada penggunaan deep learning untuk menganalisis citra mikroskopik plankton. Pendekatan visual AI dapat membantu proses identifikasi spesies, dokumentasi ekologis, dan pengembangan sistem pendukung keputusan berbasis citra.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="id">
+        <title>Modul AI Pertemuan 1</title>
+        <published>2026-06-07T00:00:00+00:00</published>
+        <updated>2026-06-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ovidedecroly.github.io/teaching/modul-ai-pertemuan-1/"/>
+        <id>https://ovidedecroly.github.io/teaching/modul-ai-pertemuan-1/</id>
+        
+        <content type="html" xml:base="https://ovidedecroly.github.io/teaching/modul-ai-pertemuan-1/">&lt;p&gt;Materi ini membahas konsep dasar Artificial Intelligence, ruang lingkup AI, contoh aplikasi AI, dan posisi AI dalam perkembangan teknologi digital.&lt;/p&gt;
+&lt;p&gt;Untuk menambahkan PDF materi, letakkan file di folder &lt;code&gt;static/pdf/&lt;/code&gt;, lalu isi bagian &lt;code&gt;pdf&lt;/code&gt; pada front matter halaman ini.&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>
