@@ -1,62 +1,69 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icons from '../../components/Icons.astro';
 ---
 
-<BaseLayout title="Image with Deep Learning | Ovide Academy">
+<BaseLayout title="Image with Deep Learning | Dr. Ovide Decroly">
   <section class="bg-white border-b border-slate-200 py-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <a href="/books" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 mb-4 inline-block">&larr; Kembali ke Daftar Buku</a>
+      <a href="/books" class="text-xs font-bold text-emerald-800 hover:underline mb-4 inline-flex items-center gap-1">
+        <span>&larr; Back to Books</span>
+      </a>
       <div class="flex items-center gap-2 mb-2">
-        <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-900 border border-emerald-300 font-mono text-[10px] font-bold rounded uppercase">In Preparation</span>
+        <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 font-mono text-[10px] font-bold rounded uppercase">In Preparation</span>
+        <span class="text-xs text-slate-400 font-mono">2026</span>
       </div>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
+      <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
         Image with Deep Learning
       </h1>
-      <p class="text-base text-slate-600 leading-relaxed">
-        A comprehensive book on image processing, deep learning, convolutional neural networks, and real-time object detection.
+      <p class="text-sm text-slate-600 leading-relaxed">
+        A technical monograph and practical guide on digital image processing, convolutional neural networks, and real-time YOLO object detection.
       </p>
     </div>
   </section>
 
   <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-10 pb-8 border-b border-slate-200">
-      <div class="md:col-span-4 bg-emerald-50/70 border border-emerald-200 rounded-2xl p-6 flex items-center justify-center">
-        <img 
-          src="/images/book-image-deep-learning.svg" 
-          alt="Cover Image with Deep Learning"
-          class="w-full max-h-64 object-contain rounded"
-        />
+    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 mb-10">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono mb-4 pb-4 border-b border-slate-200">
+        <div>
+          <span class="text-slate-400 block text-[10px] uppercase">Author</span>
+          <span class="text-slate-900 font-bold">Dr. Ovide Decroly Wisnu Ardhi</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block text-[10px] uppercase">Research Domain</span>
+          <span class="text-slate-900 font-bold">Computer Vision & Deep Learning</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block text-[10px] uppercase">Status</span>
+          <span class="text-emerald-800 font-bold">In Preparation</span>
+        </div>
       </div>
 
-      <div class="md:col-span-8 flex flex-col justify-between">
-        <div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">Sinopsis & Rencana Materi</h3>
-          <p class="text-sm text-slate-600 leading-relaxed mb-4">
-            Buku ini dirancang untuk mahasiswa ilmu komputer dan peneliti rekayasa perangkat lunak yang ingin mendalami arsitektur neural networks untuk visi komputer, mulai dari CNN dasar hingga arsitektur YOLO mutakhir.
-          </p>
-        </div>
+      <p class="text-xs text-slate-700 leading-relaxed mb-5">
+        Disusun khusus sebagai buku rujukan teknis dan praktikum bagi mahasiswa ilmu komputer serta peneliti rekayasa perangkat lunak dalam memahami arsitektur neural networks untuk visi komputer modern.
+      </p>
 
-        <div class="flex gap-3">
-          <a href="/pdf/buku-image-deep-learning.pdf" target="_blank" rel="noopener" class="flat-btn-primary">
-            📄 Unduh Pratinjau PDF
-          </a>
-          <a href="/books" class="flat-btn-outline">
-            Daftar Buku Lainnya
-          </a>
-        </div>
+      <div class="flex gap-3">
+        <a href="/pdf/buku-image-deep-learning.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs rounded transition-colors">
+          <Icons name="download" class="w-4 h-4" />
+          <span>Download Preview PDF</span>
+        </a>
+        <a href="/books" class="inline-flex items-center gap-2 px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 font-bold text-xs rounded border border-slate-200 transition-colors">
+          <span>All Publications</span>
+        </a>
       </div>
     </div>
 
-    <div class="prose prose-slate max-w-none text-slate-700 leading-relaxed space-y-6">
-      <h2 class="text-xl font-extrabold text-slate-900 border-b border-slate-200 pb-2">
-        Topik yang Dibahas
+    <div class="space-y-6 text-slate-700 text-sm leading-relaxed">
+      <h2 class="text-lg font-extrabold text-slate-900 border-b border-slate-200 pb-2">
+        Materi & Cakupan Riset
       </h2>
-      <ul class="space-y-2 list-disc pl-6 text-sm">
-        <li>Dasar Pemrosesan Citra Digital & Transformasi Matriks Piksel</li>
-        <li>Convolutional Neural Networks (CNN) dari Nol</li>
-        <li>Arsitektur Deteksi Objek Modern: R-CNN, SSD, dan YOLO Family</li>
-        <li>Segmentasi Semantik Citra Medis & Mikroskopik</li>
-        <li>Implementasi Praktis dengan PyTorch & Ultralytics</li>
+      <ul class="space-y-2 list-disc pl-6 text-xs text-slate-600">
+        <li><strong>Modul 1:</strong> Representasi Matriks Citra Digital dan Operasi Preprocessing</li>
+        <li><strong>Modul 2:</strong> Arsitektur Dasar Convolutional Neural Networks (CNN)</li>
+        <li><strong>Modul 3:</strong> Evolusi Deteksi Objek: Dari R-CNN hingga YOLOv8/YOLOv10</li>
+        <li><strong>Modul 4:</strong> Segmentasi Semantik Citra Medis dan Mikroskopik</li>
+        <li><strong>Modul 5:</strong> Deployment Model ke Perangkat Edge dan Web Interface</li>
       </ul>
     </div>
   </article>

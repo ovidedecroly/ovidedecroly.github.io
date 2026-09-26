@@ -1,35 +1,38 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icons from '../../components/Icons.astro';
 
 const books = [
   {
     title: "Literasi Data dan Teknologi Digital",
     status: "Draft",
-    cover: "/images/book-literasi-data.svg",
+    year: "2026",
     slug: "/books/literasi-data-dan-teknologi-digital",
-    desc: "An introductory book on data literacy and digital technology for students. Membahas prinsip dasar pemahaman data, etika teknologi, dan analisis digital modern.",
-    pdf: "/pdf/buku-literasi-data.pdf"
+    desc: "Buku pengantar mengenai pemahaman data, keamanan informasi, berpikir analitis, serta implikasi etis kecerdasan buatan bagi generasi akademisi modern.",
+    pdf: "/pdf/buku-literasi-data.pdf",
+    topics: ["Data Literacy", "Digital Ethics", "AI Basics", "Analytical Thinking"]
   },
   {
     title: "Image with Deep Learning",
     status: "In Preparation",
-    cover: "/images/book-image-deep-learning.svg",
+    year: "2026",
     slug: "/books/image-with-deep-learning",
-    desc: "A book or module about image processing, deep learning, and object detection. Disusun sebagai buku rujukan teknis computer vision.",
-    pdf: "/pdf/buku-image-deep-learning.pdf"
+    desc: "Buku rujukan teknis mengenai teori pemrosesan citra digital, arsitektur convolutional neural networks (CNN), dan pipeline deteksi objek mutakhir berbasis YOLO.",
+    pdf: "/pdf/buku-image-deep-learning.pdf",
+    topics: ["Computer Vision", "Convolutional Networks", "YOLO Architecture", "Segmentation"]
   }
 ];
 ---
 
-<BaseLayout title="Books | Ovide Academy">
+<BaseLayout title="Books & Publications | Dr. Ovide Decroly">
   <section class="bg-white border-b border-slate-200 py-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <span class="flat-badge mb-2">Publikasi & Teks</span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
+      <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-800">Academic Monographs</span>
+      <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-1 mb-2">
         Books & Learning Modules
       </h1>
-      <p class="text-base text-slate-600">
-        Buku rujukan ilmiah, modul pembelajaran mandiri, dan buku ajar yang disusun oleh Dr. Ovide Decroly Wisnu Ardhi.
+      <p class="text-sm text-slate-600 max-w-2xl leading-relaxed">
+        Buku rujukan ilmiah, modul pembelajaran mandiri, dan buku ajar yang disusun oleh Dr. Ovide Decroly Wisnu Ardhi untuk mendukung perkuliahan dan riset terapan.
       </p>
     </div>
   </section>
@@ -37,38 +40,43 @@ const books = [
   <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {books.map((book) => (
-        <div class="flat-card p-6 flex flex-col justify-between">
+        <div class="bg-white border border-slate-200 rounded-lg p-6 flex flex-col justify-between hover:border-emerald-600 transition-colors">
           <div>
-            <div class="w-full bg-emerald-50/70 border border-emerald-200/80 rounded-xl p-6 mb-5 flex items-center justify-center">
-              <img 
-                src={book.cover} 
-                alt={book.title} 
-                class="max-h-48 w-auto object-contain rounded"
-              />
+            <div class="flex justify-between items-center text-xs mb-3">
+              <span class="font-mono text-slate-400 font-semibold">{book.year}</span>
+              <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded font-mono text-[10px] font-bold uppercase">
+                {book.status}
+              </span>
             </div>
 
-            <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-emerald-900 border border-emerald-300 font-mono text-[10px] font-bold rounded uppercase mb-2">
-              {book.status}
-            </span>
-
             <h3 class="font-extrabold text-lg text-slate-900 mb-2 leading-snug">
-              <a href={book.slug} class="hover:text-emerald-600 transition-colors">
+              <a href={book.slug} class="hover:text-emerald-700 transition-colors">
                 {book.title}
               </a>
             </h3>
 
-            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
               {book.desc}
             </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              {book.topics.map(t => (
+                <span class="text-[10px] font-mono bg-slate-50 text-slate-600 px-2 py-0.5 rounded border border-slate-200">
+                  {t}
+                </span>
+              ))}
+            </div>
           </div>
 
-          <div class="flex gap-2 pt-4 border-t border-slate-100">
-            <a href={book.slug} class="flat-btn-secondary !py-1.5 !px-3.5 !text-xs">
-              Detail Buku &rarr;
+          <div class="flex gap-2 pt-4 border-t border-slate-100 text-xs">
+            <a href={book.slug} class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded transition-colors">
+              <span>Overview</span>
+              <Icons name="arrow-right" class="w-3.5 h-3.5" />
             </a>
             {book.pdf && (
-              <a href={book.pdf} target="_blank" rel="noopener" class="flat-btn-primary !py-1.5 !px-3.5 !text-xs">
-                📄 Unduh PDF
+              <a href={book.pdf} target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold rounded transition-colors">
+                <Icons name="download" class="w-3.5 h-3.5" />
+                <span>Download PDF</span>
               </a>
             )}
           </div>

@@ -1,62 +1,69 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icons from '../../components/Icons.astro';
 ---
 
-<BaseLayout title="Literasi Data dan Teknologi Digital | Ovide Academy">
+<BaseLayout title="Literasi Data dan Teknologi Digital | Dr. Ovide Decroly">
   <section class="bg-white border-b border-slate-200 py-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <a href="/books" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 mb-4 inline-block">&larr; Kembali ke Daftar Buku</a>
+      <a href="/books" class="text-xs font-bold text-emerald-800 hover:underline mb-4 inline-flex items-center gap-1">
+        <span>&larr; Back to Books</span>
+      </a>
       <div class="flex items-center gap-2 mb-2">
-        <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-900 border border-emerald-300 font-mono text-[10px] font-bold rounded uppercase">Draft</span>
+        <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200 font-mono text-[10px] font-bold rounded uppercase">Draft Publication</span>
+        <span class="text-xs text-slate-400 font-mono">2026</span>
       </div>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
+      <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
         Literasi Data dan Teknologi Digital
       </h1>
-      <p class="text-base text-slate-600 leading-relaxed">
-        An introductory book on data literacy and digital technology for students.
+      <p class="text-sm text-slate-600 leading-relaxed">
+        An introductory textbook on data literacy, computational thinking, and ethical digital technology for higher education students.
       </p>
     </div>
   </section>
 
   <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-10 pb-8 border-b border-slate-200">
-      <div class="md:col-span-4 bg-emerald-50/70 border border-emerald-200 rounded-2xl p-6 flex items-center justify-center">
-        <img 
-          src="/images/book-literasi-data.svg" 
-          alt="Cover Literasi Data dan Teknologi Digital"
-          class="w-full max-h-64 object-contain rounded"
-        />
+    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 mb-10">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono mb-4 pb-4 border-b border-slate-200">
+        <div>
+          <span class="text-slate-400 block text-[10px] uppercase">Author</span>
+          <span class="text-slate-900 font-bold">Dr. Ovide Decroly Wisnu Ardhi</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block text-[10px] uppercase">Academic Domain</span>
+          <span class="text-slate-900 font-bold">Data & Digital Technology</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block text-[10px] uppercase">Status</span>
+          <span class="text-emerald-800 font-bold">Draft / Open Curriculum</span>
+        </div>
       </div>
 
-      <div class="md:col-span-8 flex flex-col justify-between">
-        <div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">Informasi Buku</h3>
-          <p class="text-sm text-slate-600 leading-relaxed mb-4">
-            Buku ini disusun oleh <strong>Dr. Ovide Decroly Wisnu Ardhi, S.T., M.Eng.</strong> sebagai bahan pembelajaran dasar untuk mengenalkan konsep data, etika digital, berpikir komputasional, dan peran artificial intelligence kepada mahasiswa dan masyarakat luas.
-          </p>
-        </div>
+      <p class="text-xs text-slate-700 leading-relaxed mb-5">
+        Buku ini dirancang sebagai pegangan materi perkuliahan untuk membentuk pemahaman analitis, kecakapan interpretasi data, serta kewaspadaan etika dalam pemanfaatan teknologi kecerdasan buatan.
+      </p>
 
-        <div class="flex gap-3">
-          <a href="/pdf/buku-literasi-data.pdf" target="_blank" rel="noopener" class="flat-btn-primary">
-            📄 Unduh Draft PDF
-          </a>
-          <a href="/books" class="flat-btn-outline">
-            Daftar Buku Lainnya
-          </a>
-        </div>
+      <div class="flex gap-3">
+        <a href="/pdf/buku-literasi-data.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs rounded transition-colors">
+          <Icons name="download" class="w-4 h-4" />
+          <span>Download Draft PDF</span>
+        </a>
+        <a href="/books" class="inline-flex items-center gap-2 px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 font-bold text-xs rounded border border-slate-200 transition-colors">
+          <span>All Publications</span>
+        </a>
       </div>
     </div>
 
-    <div class="prose prose-slate max-w-none text-slate-700 leading-relaxed space-y-6">
-      <h2 class="text-xl font-extrabold text-slate-900 border-b border-slate-200 pb-2">
+    <div class="space-y-6 text-slate-700 text-sm leading-relaxed">
+      <h2 class="text-lg font-extrabold text-slate-900 border-b border-slate-200 pb-2">
         Pokok Bahasan Utama
       </h2>
-      <ul class="space-y-2 list-disc pl-6 text-sm">
-        <li>Pengenalan Konsep Data, Informasi, dan Pengetahuan</li>
-        <li>Ekosistem Teknologi Digital dan Transformasi Era Modern</li>
-        <li>Etika Penggunaan AI dan Keamanan Data Pribadi</li>
-        <li>Dasar Analisis Data untuk Pengambilan Keputusan</li>
-        <li>Literasi AI untuk Generasi Muda</li>
+      <ul class="space-y-2 list-disc pl-6 text-xs text-slate-600">
+        <li><strong>Bab 1:</strong> Fondasi Data, Informasi, dan Transformasi Digital</li>
+        <li><strong>Bab 2:</strong> Berpikir Komputasional & Prinsip Pemecahan Masalah Berbasis Data</li>
+        <li><strong>Bab 3:</strong> Pengantar Kecerdasan Buatan dan Otomasi Sistem</li>
+        <li><strong>Bab 4:</strong> Etika Digital, Perlindungan Data Pribadi, dan Tanggung Jawab Akademis</li>
+        <li><strong>Bab 5:</strong> Studi Kasus Analisis Data untuk Pengambilan Keputusan</li>
       </ul>
     </div>
   </article>

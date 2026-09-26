@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Icons from '../components/Icons.astro';
 
 interface Props {
   title?: string;
@@ -7,19 +8,19 @@ interface Props {
 }
 
 const {
-  title = "Ovide Academy | Dr. Ovide Decroly Wisnu Ardhi",
-  description = "Personal academic portal of Dr. Ovide Decroly Wisnu Ardhi, S.T., M.Eng. Applied AI Researcher in Computer Vision, Deep Learning, YOLO, Academic Writing, and Digital Education."
+  title = "Dr. Ovide Decroly Wisnu Ardhi | Applied AI & Computer Vision",
+  description = "Official Academic & Research Portal of Dr. Ovide Decroly Wisnu Ardhi, S.T., M.Eng. Applied AI, Computer Vision, YOLO, Deep Learning, and Digital Education."
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
 
 const navItems = [
-  { name: "Home", href: "/" },
+  { name: "Overview", href: "/" },
   { name: "Research", href: "/research" },
   { name: "Publications", href: "/publications" },
   { name: "Books", href: "/books" },
   { name: "Teaching", href: "/teaching" },
-  { name: "Blog", href: "/blog" },
+  { name: "Articles", href: "/blog" },
   { name: "About", href: "/about" },
 ];
 ---
@@ -32,37 +33,31 @@ const navItems = [
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content="Dr. Ovide Decroly Wisnu Ardhi, S.T., M.Eng." />
-    <meta name="theme-color" content="#059669" />
-    <link rel="icon" type="image/png" href="/images/logo-ovide-academy.png" />
+    <meta name="theme-color" content="#047857" />
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
 
-  <body class="min-h-screen flex flex-col bg-slate-50 text-slate-800 antialiased selection:bg-emerald-100 selection:text-emerald-900">
-    <!-- Top Green Accent Line -->
-    <div class="h-1 bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-400 w-full"></div>
-
-    <!-- Header Navigation -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between gap-4">
+  <body class="min-h-screen flex flex-col bg-slate-50/50 text-slate-800 antialiased font-sans">
+    
+    <!-- Header Navigation (Clean Swiss Flat Style) -->
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
         
-        <!-- Brand Logo & Identity -->
+        <!-- Text-Only Modern Brand Mark (No image logo) -->
         <a href="/" class="flex items-center gap-3 group">
-          <img 
-            src="/images/logo-ovide-academy.png" 
-            alt="Ovide Academy Logo" 
-            class="h-9 w-auto object-contain"
-            onerror="this.style.display='none'"
-          />
+          <div class="w-8 h-8 rounded-lg bg-emerald-700 text-white flex items-center justify-center font-mono font-extrabold text-xs tracking-wider shadow-xs">
+            OD
+          </div>
           <div class="flex flex-col">
-            <span class="font-extrabold text-lg tracking-tight text-slate-900 group-hover:text-emerald-700 transition-colors">
-              Ovide<span class="text-emerald-600">Academy</span>
+            <span class="font-extrabold text-sm sm:text-base tracking-tight text-slate-900 group-hover:text-emerald-700 transition-colors">
+              Dr. Ovide Decroly
             </span>
-            <span class="text-[10px] font-mono font-bold tracking-widest text-emerald-700 uppercase -mt-1">
-              Applied AI Lab
+            <span class="text-[10px] font-mono text-emerald-800 font-semibold tracking-wider uppercase -mt-0.5">
+              Applied AI Researcher
             </span>
           </div>
         </a>
@@ -75,10 +70,10 @@ const navItems = [
               <a
                 href={item.href}
                 class:list={[
-                  "px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all",
+                  "px-3 py-1.5 rounded-md text-xs font-semibold tracking-tight transition-all",
                   isActive
                     ? "bg-emerald-50 text-emerald-800 font-bold border border-emerald-200"
-                    : "text-slate-600 hover:text-emerald-700 hover:bg-slate-100/80"
+                    : "text-slate-600 hover:text-emerald-800 hover:bg-slate-100"
                 ]}
               >
                 {item.name}
@@ -87,27 +82,27 @@ const navItems = [
           })}
         </nav>
 
-        <!-- Right Quick Action CTA -->
+        <!-- Right Action Button -->
         <div class="hidden sm:flex items-center gap-3">
-          <a href="/research" class="flat-btn-primary !py-1.5 !px-3.5 !text-xs !rounded-lg">
-            <span>Explore Research</span>
-            <span class="text-emerald-200">&rarr;</span>
+          <a href="/about" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-md transition-colors shadow-xs">
+            <span>Profile & CV</span>
+            <Icons name="arrow-right" class="w-3.5 h-3.5" />
           </a>
         </div>
 
       </div>
 
-      <!-- Mobile Sub-Nav (Horizontal Scrollable) -->
-      <div class="md:hidden border-t border-slate-100 px-4 py-2 flex gap-1.5 overflow-x-auto no-scrollbar bg-slate-50/50">
+      <!-- Mobile Horizontal Scroll Navigation -->
+      <div class="md:hidden border-t border-slate-100 px-4 py-2 flex gap-1 overflow-x-auto bg-slate-50/80">
         {navItems.map((item) => {
           const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
           return (
             <a
               href={item.href}
               class:list={[
-                "px-2.5 py-1 rounded-md text-xs font-semibold whitespace-nowrap transition-all",
+                "px-2.5 py-1 rounded text-xs font-semibold whitespace-nowrap transition-all",
                 isActive
-                  ? "bg-emerald-600 text-white font-bold"
+                  ? "bg-emerald-700 text-white font-bold"
                   : "text-slate-600 bg-white border border-slate-200"
               ]}
             >
@@ -118,83 +113,74 @@ const navItems = [
       </div>
     </header>
 
-    <!-- Main Content Area -->
+    <!-- Main Content -->
     <main class="flex-grow">
       <slot />
     </main>
 
-    <!-- Academic Footer -->
-    <footer class="bg-white border-t border-slate-200 pt-14 pb-8 mt-16 text-slate-600">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+    <!-- Academic Minimal Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-12 pb-8 mt-16 text-slate-600">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
         
-        <!-- Col 1: Bio -->
         <div class="md:col-span-1">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="font-extrabold text-lg text-slate-900">
-              Ovide<span class="text-emerald-600">Academy</span>
-            </span>
+          <div class="flex items-center gap-2 mb-2">
+            <div class="w-6 h-6 rounded bg-emerald-700 text-white flex items-center justify-center font-mono font-bold text-[10px]">
+              OD
+            </div>
+            <span class="font-bold text-sm text-slate-900">Dr. Ovide Decroly</span>
           </div>
-          <p class="text-xs text-slate-500 leading-relaxed mb-4">
-            Personal academic portal of <strong>Dr. Ovide Decroly Wisnu Ardhi, S.T., M.Eng.</strong> Dedicated to research in Applied Artificial Intelligence, Computer Vision, YOLO, and Digital Education.
+          <p class="text-xs text-slate-500 leading-relaxed mb-3">
+            S.T., M.Eng. • Applied AI Researcher in Computer Vision, Deep Learning, and Digital Education.
           </p>
-          <div class="flex gap-2">
-            <a 
-              href="https://github.com/ovidedecroly" 
-              target="_blank" 
-              rel="noopener" 
-              class="px-2.5 py-1 bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 text-slate-700 rounded text-xs font-bold border border-slate-200 transition-colors"
-            >
-              GitHub ↗
-            </a>
-            <a 
-              href="/about" 
-              class="px-2.5 py-1 bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 text-slate-700 rounded text-xs font-bold border border-slate-200 transition-colors"
-            >
-              Profile ↗
-            </a>
-          </div>
+          <a 
+            href="https://github.com/ovidedecroly" 
+            target="_blank" 
+            rel="noopener" 
+            class="inline-flex items-center gap-1 text-xs font-mono font-semibold text-emerald-800 hover:underline"
+          >
+            <span>github.com/ovidedecroly</span>
+            <Icons name="external" class="w-3 h-3" />
+          </a>
         </div>
 
-        <!-- Col 2: Research -->
         <div>
-          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-3">Research Focus</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="/research/plankton-visual-ai" class="hover:text-emerald-600 transition-colors">Plankton Microscopic Vision</a></li>
-            <li><a href="/blog/yolo-deteksi-objek" class="hover:text-emerald-600 transition-colors">Real-Time YOLO Detection</a></li>
-            <li><a href="/research" class="hover:text-emerald-600 transition-colors">All Research Projects &rarr;</a></li>
-            <li><a href="/publications" class="hover:text-emerald-600 transition-colors">Scholarly Publications &rarr;</a></li>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-3">Research Domains</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="/research/plankton-visual-ai" class="hover:text-emerald-700 transition-colors">Microscopic Plankton AI</a></li>
+            <li><a href="/blog/yolo-deteksi-objek" class="hover:text-emerald-700 transition-colors">Real-Time Object Detection</a></li>
+            <li><a href="/research" class="hover:text-emerald-700 transition-colors">All Research Projects</a></li>
+            <li><a href="/publications" class="hover:text-emerald-700 transition-colors">Published Papers</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Books & Modules -->
         <div>
-          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-3">Books & Courses</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="/books/image-with-deep-learning" class="hover:text-emerald-600 transition-colors">Image with Deep Learning</a></li>
-            <li><a href="/books/literasi-data-dan-teknologi-digital" class="hover:text-emerald-600 transition-colors">Literasi Data & Digital</a></li>
-            <li><a href="/teaching/modul-ai-pertemuan-1" class="hover:text-emerald-600 transition-colors">Pertemuan 1 Modul AI</a></li>
-            <li><a href="/books" class="hover:text-emerald-600 transition-colors">All Published Books &rarr;</a></li>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-3">Books & Curriculum</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="/books/image-with-deep-learning" class="hover:text-emerald-700 transition-colors">Image with Deep Learning</a></li>
+            <li><a href="/books/literasi-data-dan-teknologi-digital" class="hover:text-emerald-700 transition-colors">Literasi Data & Digital</a></li>
+            <li><a href="/teaching/modul-ai-pertemuan-1" class="hover:text-emerald-700 transition-colors">Lecture Modules</a></li>
+            <li><a href="/books" class="hover:text-emerald-700 transition-colors">All Books</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: Connect -->
         <div>
-          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-3">Academic Connect</h4>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-3">Academic Collaboration</h4>
           <p class="text-xs text-slate-500 mb-3 leading-relaxed">
-            Open for research collaboration, academic seminars, keynote speeches, and AI curriculum consulting.
+            Open for research collaboration, keynote presentations, and academic consulting.
           </p>
-          <a href="/about" class="inline-block text-xs font-bold text-emerald-700 hover:text-emerald-800">
-            Contact & Full Profile &rarr;
+          <a href="/about" class="text-xs font-bold text-emerald-800 hover:text-emerald-900 flex items-center gap-1">
+            <span>View Full Academic Profile</span>
+            <Icons name="arrow-right" class="w-3 h-3" />
           </a>
         </div>
 
       </div>
 
-      <!-- Bottom Bar -->
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-500">
-        <p>© {new Date().getFullYear()} <strong>Ovide Academy</strong> — Dr. Ovide Decroly Wisnu Ardhi. All rights reserved.</p>
-        <p class="font-mono text-[11px] text-slate-400">Flat Academic Architecture • Astro & Tailwind</p>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-400">
+        <p>© {new Date().getFullYear()} Dr. Ovide Decroly Wisnu Ardhi. All rights reserved.</p>
+        <p class="font-mono text-[11px]">Academic & Research Portfolio</p>
       </div>
     </footer>
+
   </body>
 </html>
